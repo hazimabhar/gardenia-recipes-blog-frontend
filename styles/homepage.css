@@ -367,8 +367,7 @@ footer
 {
   display: flex;
   justify-content: space-around;
-  padding-top: 50px;
-  margin-left: -100px;
+  padding-top: 10px;
 }
 .footer-image
 {
@@ -383,12 +382,26 @@ footer
 .contact-email
 {
   text-align: center ;
-  padding-top: 15px;
+  padding-top: 35px;
 }
 .contact-email ul li 
 {
   list-style: none;
   padding-bottom: 20px;
+}
+.contact-header
+{
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.contact-emailaddress
+{
+  font-size: 12px;
+  font-weight: 300;
+}
+.contact-number
+{
+  font-size: 12px;
 }
 .social-media
 {
@@ -407,6 +420,29 @@ footer
 .fa-brands.fa-twitter
 {
   font-size: 25px;
+}
+.fa-brands:hover
+{
+  color: rgb(250,7,9);
+}
+.location-map
+{
+  padding-top: 35px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.location-header
+{
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+#map
+{
+  margin-top: 10px;
+  width: 250px;
+  height: 200px;
+  background-color: #959599;
 }
 hr{
   margin-top: 20px;
