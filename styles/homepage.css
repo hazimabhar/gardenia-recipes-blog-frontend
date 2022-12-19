@@ -297,9 +297,11 @@ option{
 }
 .subspotlight1:hover .sandwich-telur{
   opacity: 1;
+  transition: 1.0s;
 }
 .subspotlight1:hover .seemore-sub1{
   opacity: 1;
+  transition: 1.0s;
 }
 .subspotlight2-image{
   width:25vw;
@@ -314,6 +316,46 @@ option{
   box-shadow: 19px 3px 40px 0px rgba(0,0,0,0.25);
   transform: scale(1.01,1.01);
   transition: 0.5s;
+}
+.sandwich-telurmata
+{
+  position: absolute;
+  font-size: 25px;
+  font-weight: 700;
+  top: 136%;
+  right: 6%;
+  opacity: 0;
+}
+.seemore-sub2
+{
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  background-color: #0c1484;
+  border-radius: 5px;
+  top: 141%;
+  right: 19.6%;
+  padding: 8px;
+  font-size: 12px;
+  opacity: 0;
+}
+.seemore-sub2:hover
+{
+  background-color: #1824c7;
+}
+.subspotlight2:hover .subspotlight2-image
+{
+  opacity: 0.3;
+  transition: 1.0s;
+}
+.subspotlight2:hover .sandwich-telurmata
+{
+  opacity: 1;
+  transition: 1.0s;
+}
+.subspotlight2:hover .seemore-sub2{
+  opacity: 1;
+  transition: 1.0s;
 }
 footer
 {
