@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="./assets/icon-gardenia.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/recipelist.css">
+    <title>Recipe List </title>
+</head>
+<body>
+    <header>
+        <div class="navigation-bar">
+            <a href="index.html"><img class="navbar-logo" src="./assets/Gardenia Logo.png" alt="logo"></a>
+            <ul class="leftside-navigation-bar">
+                <li class="breakfast"><a href="breakfast.html">Breakfast</a></li>
+                <li class="lunch"><a href="lunch.html">Lunch</a></li>
+                <li class="dinner"><a href="dinner.html">Dinner</a></li>
+            </ul>
+            <ul class="rightside-navigation-bar">
+                <li class="login"><a href="login.html">Login</a></li>
+                <li class="signup"><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+        <div class="navhistory">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="current">Breakfast</li>
+            </ul>
+        </div>
+    </header>
+    <div class="content">
+        <div class="search-sort">
+            <form class="search-form" action=""><input class="search" type="text" placeholder="Search recipes and more..."><span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span></form>
+            <div class="sort">
+                <span>Sort By:</span>
+                <select name="sort" id="sort">
+                    <option value="newest">Newest</option>
+                    <option value="mostrated">Most Rated</option>
+                    <option value="budget">Budget</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
