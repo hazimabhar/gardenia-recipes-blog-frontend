@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varta:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./assets/Gardenia Logo.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="styles/signup.css" />
+        <title>Sign Up</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <img
+                    src="assets/Gardenia Logo.png"
+                    alt="logo"
+                    class="navbar-img"
+                />
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Breakfast</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Lunch</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Dinner</a>
+                </div>
+            </div>
+            <div class="navbar-content">
+                <a href="#" class="login">Login</a
+                ><a href="#" class="signup">Signup</a>
+                <a href="#" class="navbar-burger" onclick="openNav()"
+                    ><i class="fa-solid fa-bars"></i
+                ></a>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div class="navbar-side" id="sidenav">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+                >&times;</a
+            >
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Breakfast</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Lunch</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Dinner</a>
+            </div>
+            <a href="#" class="login">Login</a
+            ><a href="#" class="signup">Signup</a>
+        </div>
+
+        <!-- Login -->
+        <section class="signup-container">
+            <form class="signup-input-field">
+                <div class="signup-greet">
+                    <h1>Signup for free!</h1>
+                    <p>Get started with an account on Gardenia Recipes</p>
+                </div>
+                <div class="signup-input-group">
+                    <label for="" class="signup-input-label">Full name</label>
+                    <input
+                        type="text"
+                        class="signup-input-box"
+                        placeholder="Enter your full name"
+                    />
+                </div>
+                <div class="signup-input-group">
+                    <label for="" class="signup-input-label">Email</label>
+                    <input
+                        type="email"
+                        class="signup-input-box"
+                        placeholder="Enter your email"
+                    />
+                </div>
+                <div class="signup-input-group">
+                    <label for="" class="signup-input-label">Username</label>
+                    <input
+                        type="text"
+                        class="signup-input-box"
+                        placeholder="Enter your username"
+                    />
+                </div>
+                <div class="signup-input-group">
+                    <label for="" class="signup-input-label">Password</label>
+                    <input
+                        type="password"
+                        class="signup-input-box"
+                        placeholder="Enter your new password"
+                    />
+                </div>
+                <div class="signup-input-group">
+                    <label for="" class="signup-input-label"
+                        >Confirm Password</label
+                    >
+                    <input
+                        type="password"
+                        class="signup-input-box"
+                        placeholder="Confirm your password"
+                    />
+                </div>
+                <button type="submit" class="signup-btn-submit">Sign in</button>
+                <p class="signup-inform-login">
+                    Already have an account?&nbsp;<a
+                        href="login.html"
+                        class="signup-link-login"
+                        >Sign in</a
+                    >
+                </p>
+            </form>
+            <div class="signup-img">
+                <img src="assets/signup-bg.png" alt="bg-signup" />
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer"></footer>
+
+        <script src="scripts/login.js"></script>
+    </body>
+</html>
