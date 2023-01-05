@@ -11,26 +11,53 @@
     <title>Recipe List </title>
 </head>
 <body>
-    <header>
-        <div class="navigation-bar">
-            <a href="index.html"><img class="navbar-logo" src="./assets/Gardenia Logo.png" alt="logo"></a>
-            <ul class="leftside-navigation-bar">
-                <li class="breakfast"><a href="breakfast.html">Breakfast</a></li>
-                <li class="lunch"><a href="lunch.html">Lunch</a></li>
-                <li class="dinner"><a href="dinner.html">Dinner</a></li>
-            </ul>
-            <ul class="rightside-navigation-bar">
-                <li class="login"><a href="login.html">Login</a></li>
-                <li class="signup"><a href="signup.html">Sign Up</a></li>
-            </ul>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="navbar-content">
+            <img
+                src="assets/Gardenia Logo.png"
+                alt="logo"
+                class="navbar-img"
+            />
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Breakfast</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Lunch</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Dinner</a>
+            </div>
         </div>
-        <div class="navhistory">
-            <ul class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li class="current">Breakfast</li>
-            </ul>
+        <div class="navbar-content">
+            <a href="#" class="login">Login</a
+            ><a href="#" class="signup">Signup</a>
+            <a href="#" class="navbar-burger" onclick="openNav()"
+                ><i class="fa-solid fa-bars"></i
+            ></a>
         </div>
-    </header>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="navbar-side" id="sidenav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+            >&times;</a
+        >
+        <div class="navbar-link-div">
+            <a href="#" class="navbar-link">Breakfast</a>
+        </div>
+        <div class="navbar-link-div">
+            <a href="#" class="navbar-link">Lunch</a>
+        </div>
+        <div class="navbar-link-div">
+            <a href="#" class="navbar-link">Dinner</a>
+        </div>
+        <a href="#" class="login">Login</a
+        ><a href="#" class="signup">Signup</a>
+    </div>
+    <div class="navhistory">
+        
+    </div>
     <div class="content">
         <div class="search-sort">
             <form class="search-form" action=""><input class="search" type="text" placeholder="Search recipes and more..."><span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span></form>

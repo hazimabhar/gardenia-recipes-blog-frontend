@@ -1,51 +1,65 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
+    --blue-color: #0c1484;
+    --grey-color: #e2e2e2;
+    --red-color: #fd0001;
+    --darkred-color: #c41212;
+    --white-color: #ffffff;
+    --darkgrey-color: #5d5d5d;
+    --black-color: #000000;
   }
-  body{
-    background-color: #e2e2e2;
-  }
+  body {
+    background-color: var(--grey-color);
+}
 
-  .navbar-logo
-  {
+/* navbar styling */
+.navbar {
+    margin: 20px 10px;
+    background-color: var(--blue-color);
+    border-radius: 25px;
+    display: flex;
+    padding: 7px 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-content {
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-content:nth-child(1) {
+    margin-left: 25px;
+}
+
+.navbar-content:nth-child(2) {
+    margin-right: 25px;
+}
+
+.navbar-img {
     width: 100px;
     height: auto;
     cursor: pointer;
-    margin-left: 50px;
-    margin-top: 10px;
-  
-  }
-  .navigation-bar
-  {
-    display: flex;
-    justify-content: space-between;
-    background-color: #0C1484;
-    border-radius: 25px;
-    width: 98%;
-    height: 65px;
-    margin-left: 15px;
-    margin-top: 20px;
-  }
-  .navigation-bar ul li
-  {
-    list-style: none;
-    display: inline-block;
-    margin: 20px 20px;
+}
+
+.navbar-link-div {
+    margin: 0px 20px;
     position: relative;
-  }
-  .navigation-bar ul li a {
+}
+
+.navbar-link {
+    display: inline-block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: smaller;
+    color: var(--white-color);
+    font-size: 15px;
     font-family: "Poppins";
     font-weight: 500;
-  }
-  .leftside-navigation-bar
-  {
-    margin-left: -750px;
-  }
-  .navigation-bar ul.leftside-navigation-bar li::after {
+}
+
+.navbar-link::after {
     content: "";
     height: 2px;
     width: 0;
@@ -53,29 +67,69 @@
     position: absolute;
     left: 0;
     bottom: -5px;
-    transition: 1.0s;
-  }
-  .navigation-bar ul.leftside-navigation-bar li:hover::after 
-  {
+    transition: 1s;
+}
+
+.navbar-link:hover::after {
     width: 100%;
-  }
-  .rightside-navigation-bar
-  {
+}
+.login,
+.signup {
+    margin: 0px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.login {
+    color: var(--white-color);
+}
+
+.login:hover {
+    color: var(--red-color);
+}
+
+.signup {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    padding: 6px 24px;
+    border-radius: 30px;
+}
+
+.signup:hover {
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
+
+.navbar-burger {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 20px;
+    display: none;
+}
+
+.navbar-side {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--blue-color);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.navbar-side .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 32px;
     margin-right: 50px;
-  }
-  .navigation-bar ul li.login a:hover {
-    color: rgb(250,7,9);
-  }
-  .navigation-bar ul li.signup a {
-    color: rgb(0, 0, 0);
-    background-color: white;
-    padding: 5px 25px;
-    border-radius: 40px ;
-  }
-  .navigation-bar ul li.signup a:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(250,7,9);
-  }
+}
+
   .navhistory 
   {
     margin-left: 30px;
