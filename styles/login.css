@@ -194,6 +194,17 @@ body {
     background-color: var(--darkred-color);
 }
 
+.login-inform-signup {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.login-link-signup {
+    color: var(--black-color);
+    font-weight: 700;
+}
+
 /* ************************************* */
 /* *                                   * */
 /* *   FOR TAB AND MOBILE RESPONSIVE   * */
