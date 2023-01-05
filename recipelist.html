@@ -56,7 +56,10 @@
         ><a href="#" class="signup">Signup</a>
     </div>
     <div class="navhistory">
-        
+        <ul class="breadcrumb">
+            <li class="home"><a href="index.html">Home</a></li>
+            <li class="current">Breakfast</li>
+        </ul>
     </div>
     <div class="content">
         <div class="search-sort">
@@ -70,7 +73,91 @@
                 </select>
             </div>
         </div>
+        <div class="recipelist">
+            <div class="recipe">
+                <div class="menuoftheday">
+                    <img class="breakfastspotlight" src="./assets/breakfast1.png" alt="">
+                    <div class="title-menuoftheday-rating">
+                        <span class="title">Burger Stadium Guna Roti Gardenia</span>
+                        <span class="menu-of-the-day">Menu of The Day! <i class="fa-solid fa-thumbs-up"></i></span>
+                        <span class="rating"><i class="fa-solid fa-star"></i>4.6 (400+)</span>
+                        <ul class="budget-recipe">
+                            <li><span class="spotlight-estimated-budget"><i class="fa-sharp fa-solid fa-dollar-sign"></i><i class="fa-sharp fa-solid fa-dollar-sign"></i> &nbsp; Estimated Budget:</span><span class="spotlight-price">RM 8.50</span></li>
+                            <li><span class="spotlight-recipe-by"><i class="fa-solid fa-user"></i>Recipe By:</span><span class="chef-name">Ahmad Maslan</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="othermenu">
+                </div>
+            </div>
+            <div class="filter">
+                <table>
+                    <tr>
+                        <td>Filter By:</td>
+                        <td> <button> Clear All</button></td>
+                    </tr>
+                    <tr>
+                        <td>Rating</td>
+                        <tr><td><input type="radio" name="star" id="fivestar" value="5"> <label for="fivestar">5 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
+                        <tr><td><input type="radio" name="star" id="fourstar" value="4"> <label for="fourstar">4 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
+                        <tr><td><input type="radio" name="star" id="threestar" value="3"> <label for="threestar">3 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
+                        <tr><td><input type="radio" name="star" id="twostar" value="2"> <label for="twostar">2 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
+                        <tr><td><input type="radio" name="star" id="onestar" value="1"> <label for="onestar">1 <i class="fa-solid fa-star"></i></label></td></tr>
+                    </tr>
+                    <tr>
+                        <td>Gardenia Product</td>
+                        <tr><td><input type="radio" name="product" id="roti" value="roti"> <label for="roti">Original Classic</label></td></tr>
+                        <tr><td><input type="radio" name="product" id="kaya" value="kaya"> <label for="kaya">A.Rossie's Kaya</label></td></tr>
+                        <tr><td><input type="radio" name="product" id="wrap" value="wrap"> <label for="wrap">Roll-Up Wraps</label></td></tr>
+                        <tr><td><input type="radio" name="product" id="mee" value="mee"> <label for="mee">NuMee Gardenia</label></td></tr>
+                    </tr>
+                    <tr>
+                        <td>Estimated Budget</td>
+                        <tr><td><input type="radio" name="budget" id="murah" value="zero"> <label for="murah">RM0 - RM5</label></td></tr>
+                        <tr><td><input type="radio" name="budget" id="biasa" value="five"> <label for="biasa">RM5 - RM10</label></td></tr>
+                        <tr><td><input type="radio" name="budget" id="sederhana" value="ten"> <label for="sederhana">RM10 - RM15</label></td></tr>
+                        <tr><td><input type="radio" name="budget" id="mahal" value="fifteen"> <label for="mahal">RM15 and above</label></td></tr>
+                   
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
-    
+    <footer>
+        <div class="desc-contact-location">
+            <div class="logo-desc">
+                <img class="footer-image" src="./assets/Gardenia Logo Nobg.png" alt="">
+                <br>
+                <span>Gardenia recipes provides various 
+                    <br>recipes of dessert and food that using 
+                    <br>our products. This website will gathered 
+                    <br>all recipes idea from us and the 
+                    <br>Gardenia users across the country.
+                 </span>
+            </div>
+            <div class="contact-email">
+                <ul>
+                    <li><span class="contact-header">CONTACT US</span></li>
+                    <li><span class="contact-emailaddress">Gardeniarecipes@gmail.com</span></li>
+                    <li><span class="contact-number">03-123123009</span></li>
+                    <li class="social-media"?>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="location-map">
+                <span class="location-header">OUR LOCATION</span> 
+                <div id="map"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            Copyright &copy; 2022 Gardenia Recipes Website All rights reserved.
+        </div>
+    </footer>
+
 </body>
 </html>
