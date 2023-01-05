@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <h1>Login</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varta:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./assets/Gardenia Logo.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="styles/login.css" />
+        <title>Login</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <img
+                    src="assets/Gardenia Logo.png"
+                    alt="logo"
+                    class="navbar-img"
+                />
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Breakfast</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Lunch</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Dinner</a>
+                </div>
+            </div>
+            <div class="navbar-content">
+                <a href="#" class="login">Login</a
+                ><a href="#" class="signup">Signup</a>
+                <a href="#" class="navbar-burger" onclick="openNav()"
+                    ><i class="fa-solid fa-bars"></i
+                ></a>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div class="navbar-side" id="sidenav">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+                >&times;</a
+            >
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Breakfast</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Lunch</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Dinner</a>
+            </div>
+            <a href="#" class="login">Login</a
+            ><a href="#" class="signup">Signup</a>
+        </div>
+
+        <!-- Login -->
+        <section class="login-container">
+            <div class="login-img">
+                <img src="" alt="bg-login" />
+            </div>
+            <form class="login-input-field">
+                <div class="login-greet">
+                    <h1>Hello Again!</h1>
+                    <p>Please enter your details</p>
+                </div>
+                <div class="login-input-group">
+                    <label for="" class="login-input-label">Username</label>
+                    <input type="text" class="login-input-box" placeholder="Enter your username" />
+                </div>
+                <div class="login-input-group">
+                    <label for="" class="login-input-label">Password</label>
+                    <input type="password" class="login-input-box" placeholder="Enter your password" />
+                </div>
+                <button type="submit" class="login-btn-submit">Sign in</button>
+                <p class="login-inform-signup">Don't have an account?&nbsp;<a href="signup.html" class="login-link-signup">Sign up</a></p>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            
+        </footer>
+
+        <script src="scripts/login.js"></script>
+    </body>
 </html>
