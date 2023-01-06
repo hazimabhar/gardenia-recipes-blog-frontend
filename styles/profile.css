@@ -3,6 +3,7 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
     --blue-color: #0c1484;
+    --light-blue: #7dbce0;
     --grey-color: #e2e2e2;
     --red-color: #fd0001;
     --darkred-color: #c41212;
@@ -142,83 +143,199 @@ body {
     margin-right: 50px;
 }
 
-/* login styling */
-.login-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1920px;
+/* big container styling */
+.big-container {
+    background-color: var(--white-color);
+    max-width: 1360px;
     margin: 50px auto;
+    border: 1px solid var(--darkgrey-color);
+    border-radius: 25px;
+    display: flex;
 }
 
-.login-img {
-    display: grid;
-    place-items: center;
-    max-width: 600px;
+/* sidenav styling */
+.sidenav {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
-.login-img img {
+.username-section {
+    background-color: var(--blue-color);
+    border-top-left-radius: 25px;
+    padding: 0px 10px;
+}
+
+.open-border-bottom-right {
+    border-bottom-right-radius: 25px;
+}
+
+.open-border-top-right {
+    border-top-right-radius: 25px;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    padding: 20px;
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.username i {
+    font-size: 36px;
+}
+
+.username-title {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.sidenav-link-container {
+    background-color: var(--blue-color);
+}
+
+.sidenav-link {
+    display: block;
+    padding: 10px 15px 10px 10px;
+    margin: 0px 0px 0px 5px;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.active {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+.sidenav-overall {
+    flex-wrap: 1;
+    background-color: var(--blue-color);
+    height: 100%;
+    border-bottom-left-radius: 25px;
+}
+
+.profile-section {
     width: 100%;
+    padding: 0 20px;
+}
+
+.profile-intro {
+    position: relative;
+}
+
+.profile-bg-img {
+    height: 200px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.profile-bg-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.profile-bg-img-title {
+    color: var(--white-color);
+    padding: 20px 30px;
+    font-size: 32px;
+}
+
+.profile-username-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    bottom: 65px;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.profile-picture {
+    width: 150px;
     height: auto;
 }
 
-.login-greet h1 {
-    font-size: 36px;
-    text-align: center;
+.profile-fullname {
+    color: var(--blue-color);
 }
 
-.login-greet p {
-    text-align: center;
+.profile-username {
+    color: var(--red-color);
 }
 
-.login-input-group {
-    margin: 20px 0;
+.profile-detail {
+    max-width: 1000px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    position: relative;
+    bottom: 30px;
 }
 
-.login-input-label {
-    display: block;
-    font-size: 16px;
-}
-
-.login-input-box {
-    display: block;
-    width: 100%;
-    padding: 12px 18px;
-    border-radius: 7.5px;
-    border: 1px solid var(--darkgrey-color);
-    font-size: 16px;
-}
-
-.login-btn-submit {
-    padding: 6px 24px;
-    border-radius: 7.5px;
-    display: block;
-    width: 100%;
+.profile-detail-icons {
+    display: grid;
+    place-items: center;
     background-color: var(--blue-color);
     color: var(--white-color);
-    font-size: 16px;
+    padding: 10px;
 }
 
-.login-btn-submit:hover {
-    background-color: var(--red-color);
+.top-left-radius {
+    border-top-left-radius: 10px;
 }
 
-.login-btn-submit:focus {
-    background-color: var(--darkred-color);
+.top-right-radius {
+    border-top-right-radius: 10px;
 }
 
-.login-inform-signup {
-    margin-top: 10px;
-    font-size: 12px;
-    text-align: center;
+.bottom-left-radius {
+    border-bottom-left-radius: 10px;
 }
 
-.login-link-signup {
+.bottom-right-radius {
+    border-bottom-right-radius: 10px;
+}
+
+.profile-detail-content {
+    background-color: var(--light-blue);
     color: var(--black-color);
+    padding: 10px 20px;
+    position: relative;
+}
+
+.profile-detail-edit {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
     font-weight: 700;
 }
 
-/* footer styling */
+.profile-detail-edit a {
+    color: var(--black-color);
+}
+
+.posts-and-likes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.posts, .likes {
+    background-color: var(--light-blue);
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 /* footer styling */
 footer
 {
@@ -319,35 +436,4 @@ footer
   text-align: center;
   padding: 10px;
   font-size: 12px;
-}
-
-/* ************************************* */
-/* *                                   * */
-/* *   FOR TAB AND MOBILE RESPONSIVE   * */
-/* *                                   * */
-/* ************************************* */
-@media (max-width: 960px) {
-    /* navbar */
-    .navbar-link-div,
-    .login,
-    .signup {
-        display: none;
-    }
-
-    .navbar-burger {
-        display: block;
-    }
-
-    .navbar-side {
-        padding-top: 60px;
-    }
-
-    .navbar-side .navbar-link-div,
-    .navbar-side .login,
-    .navbar-side .signup {
-        display: block;
-    }
-    .navbar-link:hover::after {
-        width: 15%;
-    }
 }
