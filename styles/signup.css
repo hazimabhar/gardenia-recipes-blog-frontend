@@ -218,6 +218,109 @@ body {
     height: auto;
 }
 
+/* footer styling */
+/* footer styling */
+footer
+{
+  margin-top: 100px;
+  height: auto;
+  background-color: #0c1484;
+  color: white;
+}
+.desc-contact-location
+{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.footer-image
+{
+  width: 207px;
+  height: auto;
+}
+.logo-desc
+{
+  text-align: center;
+  font-size: 12px;
+}
+.contact-email
+{
+  text-align: center ;
+  padding-top: 35px;
+}
+.contact-email ul li 
+{
+  list-style: none;
+  padding-bottom: 20px;
+}
+.contact-header
+{
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.contact-emailaddress
+{
+  font-size: 12px;
+  font-weight: 300;
+}
+.contact-number
+{
+  font-size: 12px;
+}
+.social-media
+{
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+.fa-brands.fa-instagram
+{
+  font-size: 30px;
+}
+.fa-brands.fa-facebook-f
+{
+  font-size: 25px;
+}
+.fa-brands.fa-twitter
+{
+  font-size: 25px;
+}
+.fa-brands:hover
+{
+  color: rgb(250,7,9);
+}
+.location-map
+{
+  padding-top: 35px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.location-header
+{
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+#map
+{
+  margin-top: 10px;
+  width: 250px;
+  height: 200px;
+  background-color: #959599;
+}
+.hr{
+  margin-top: 20px;
+  padding: 1px;
+  border: none;
+  background-color: #7dbce0;
+}
+.copyright
+{
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
 /* ************************************* */
 /* *                                   * */
 /* *   FOR TAB AND MOBILE RESPONSIVE   * */
