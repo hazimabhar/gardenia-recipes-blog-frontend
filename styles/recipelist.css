@@ -13,7 +13,10 @@
   body {
     background-color: var(--grey-color);
 }
-
+button
+{
+  cursor: pointer;
+}
 /* navbar styling */
 .navbar {
     margin: 20px 10px;
@@ -223,11 +226,12 @@ option{
   border-radius: 25px;
   box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.25);
   margin: 50px 35px;
+  display: flex;
 }
 .breakfastspotlight
 {
   border-radius: 25px;
-  /* width: 1000px; */
+  width: 600px; 
 }
 .title-menuoftheday-rating
 {
@@ -235,9 +239,30 @@ option{
   font-size: 15px;
   font-weight: 600;
 }
-.title
+.info-top
 {
-  padding: 0px 30px 0px 30px;
+  padding:25px;
+}
+.info-top td
+{
+  padding:10px;
+}
+.first-info
+{
+  font-size: 20px;
+}
+.second-info
+{
+  border-bottom:  2px solid var(--grey-color);
+}
+.info-bot
+{
+  padding:25px;
+  color: var(--darkgrey-color);
+}
+.info-bot td
+{
+  padding: 10px;
 }
 .menu-of-the-day
 {
@@ -245,6 +270,10 @@ option{
   color: var(--white-color);
   padding: 5px 15px;
   border-radius: 25px;
+}
+.third-info
+{
+  text-align: right;
 }
 .rating
 {
@@ -257,31 +286,73 @@ option{
 .fa-solid.fa-star{
   color: rgb(255, 196, 0);
 }
-.budget-recipe
+.dollarsign
 {
-  list-style: none;
-  padding-top: 15px;
-  padding-left: 25px;
-}
-.budget-recipe li
-{
-  padding:5px;
-  font-size: 15px;
-  color: var(--darkgrey-color);
-}
-.spotlight-estimated-budget
-{
-  padding-right: 10px;
-  color: var(--darkgrey-color);
-}
-.spotlight-recipe-by
-{
-  padding-right: 10px;
-  color: var(--darkgrey-color)
+  float: left;
+  padding-right: 15px;
 }
 .fa-solid.fa-user
 {
-  padding-right: 18px;
+  padding-right: 20px;
+}
+.fa-solid.fa-clock
+{
+  padding-right: 20px;
+}
+.spotlight-estimated-budget
+{
+  font-weight: 400;
+}
+.spotlight-recipe-by
+{
+  font-weight: 400;
+}
+.spotlight-date
+{
+  font-weight: 400;
+}
+
+.filter
+{
+  margin: 50px;
+  background-color: var(--white-color);
+  padding: 20px;
+  font-weight: 500;
+}
+.filterby
+{
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--darkgrey-color);
+}
+.clearall
+{
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+.ratingfilter
+{
+  padding-top: 10px;
+}
+.onestar
+{
+  padding-bottom: 10px;
+}
+.productfilter
+{
+  padding-top: 10px;
+  border-top:  1px solid var(--darkgrey-color);
+}
+.mee
+{
+  padding-bottom: 10px;
+}
+.pricefilter
+{
+  padding-top: 10px;
+  border-top:  1px solid var(--darkgrey-color);
+
 }
 
 /* footer */
