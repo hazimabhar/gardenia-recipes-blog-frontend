@@ -9,6 +9,7 @@
     --white-color: #ffffff;
     --darkgrey-color: #5d5d5d;
     --black-color: #000000;
+    box-sizing: border-box;
 }
 
 button {
@@ -26,11 +27,11 @@ body {
 
 /* navbar styling */
 .navbar {
-    margin: 10px;
+    margin: 20px 10px;
     background-color: var(--blue-color);
-    border-radius: 17.5px;
-    padding: 10px 15px;
+    border-radius: 25px;
     display: flex;
+    padding: 7px 10px;
     justify-content: space-between;
     align-items: center;
 }
@@ -50,7 +51,7 @@ body {
 }
 
 .navbar-img {
-    width: 130px;
+    width: 100px;
     height: auto;
     cursor: pointer;
 }
