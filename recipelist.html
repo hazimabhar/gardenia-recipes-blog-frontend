@@ -76,48 +76,79 @@
         <div class="recipelist">
             <div class="recipe">
                 <div class="menuoftheday">
-                    <img class="breakfastspotlight" src="./assets/breakfast1.png" alt="">
+                    <img class="breakfastspotlight" src="./assets/breakfast1.jpg" alt="">
                     <div class="title-menuoftheday-rating">
-                        <span class="title">Burger Stadium Guna Roti Gardenia</span>
-                        <span class="menu-of-the-day">Menu of The Day! <i class="fa-solid fa-thumbs-up"></i></span>
-                        <span class="rating"><i class="fa-solid fa-star"></i>4.6 (400+)</span>
-                        <ul class="budget-recipe">
-                            <li><span class="spotlight-estimated-budget"><i class="fa-sharp fa-solid fa-dollar-sign"></i><i class="fa-sharp fa-solid fa-dollar-sign"></i> &nbsp; Estimated Budget:</span><span class="spotlight-price">RM 8.50</span></li>
-                            <li><span class="spotlight-recipe-by"><i class="fa-solid fa-user"></i>Recipe By:</span><span class="chef-name">Ahmad Maslan</span></li>
-                        </ul>
+                        <table class="info-top">
+                            <tr> 
+                                <td class="first-info">Burger Stadium Guna Roti Gardenia</td>
+                            </tr>
+                            <tr>
+                                <td class="second-info">
+                                    <span class="menu-of-the-day">Menu of The Day! <i class="fa-solid fa-thumbs-up"></i></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="third-info">
+                                    <span class="rating"><i class="fa-solid fa-star"></i>4.6 (400+)</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="info-bot">
+                            <tr>
+                                <td>
+                                    <span class="spotlight-estimated-budget">
+                                        <div class="dollarsign">
+                                            <i class="fa-sharp fa-solid fa-dollar-sign"></i><i class="fa-sharp fa-solid fa-dollar-sign"></i>
+                                        </div>
+                                    Estimated Budget:
+                                    </span>
+                                    <span class="spotlight-price">
+                                        RM 8.50
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="spotlight-recipe-by"><i class="fa-solid fa-user"></i>Recipe By:</span><span class="chef-name">Ahmad Maslan</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="spotlight-date"><i class="fa-solid fa-clock"></i></i>Uploded On:</span><span class="date">03 December 2018</span>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="othermenu">
                 </div>
             </div>
             <div class="filter">
-                <table>
+                <table class="select-filter">
                     <tr>
-                        <td>Filter By:</td>
-                        <td> <button> Clear All</button></td>
+                        <td class="filterby">Filter By:
+                            <button class="clearall">Clear All</button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Rating</td>
-                        <tr><td><input type="radio" name="star" id="fivestar" value="5"> <label for="fivestar">5 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
-                        <tr><td><input type="radio" name="star" id="fourstar" value="4"> <label for="fourstar">4 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
-                        <tr><td><input type="radio" name="star" id="threestar" value="3"> <label for="threestar">3 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
-                        <tr><td><input type="radio" name="star" id="twostar" value="2"> <label for="twostar">2 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
-                        <tr><td><input type="radio" name="star" id="onestar" value="1"> <label for="onestar">1 <i class="fa-solid fa-star"></i></label></td></tr>
+                        <td class="ratingfilter">Rating</td>
+                        <tr><td class="fivestar"><input type="checkbox" name="star" id="fivestar" value="5"> <label for="fivestar">5 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
+                        <tr><td class="fourstar"><input type="checkbox" name="star" id="fourstar" value="4"> <label for="fourstar">4 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
+                        <tr><td class="threestar"><input type="checkbox" name="star" id="threestar" value="3"> <label for="threestar">3 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
+                        <tr><td class="twostar"><input type="checkbox" name="star" id="twostar" value="2"> <label for="twostar">2 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label></td></tr>
+                        <tr><td class="onestar"><input type="checkbox" name="star" id="onestar" value="1"> <label for="onestar">1 <i class="fa-solid fa-star"></i></label></td></tr>
                     </tr>
                     <tr>
-                        <td>Gardenia Product</td>
-                        <tr><td><input type="radio" name="product" id="roti" value="roti"> <label for="roti">Original Classic</label></td></tr>
-                        <tr><td><input type="radio" name="product" id="kaya" value="kaya"> <label for="kaya">A.Rossie's Kaya</label></td></tr>
-                        <tr><td><input type="radio" name="product" id="wrap" value="wrap"> <label for="wrap">Roll-Up Wraps</label></td></tr>
-                        <tr><td><input type="radio" name="product" id="mee" value="mee"> <label for="mee">NuMee Gardenia</label></td></tr>
+                        <td class="productfilter">Gardenia Product</td>
+                        <tr><td class="roti"><input type="checkbox" name="product" id="roti" value="roti"> <label for="roti">Original Classic</label></td></tr>
+                        <tr><td class="kaya"><input type="checkbox" name="product" id="kaya" value="kaya"> <label for="kaya">A.Rossie's Kaya</label></td></tr>
+                        <tr><td class="wrap"><input type="checkbox" name="product" id="wrap" value="wrap"> <label for="wrap">Roll-Up Wraps</label></td></tr>
+                        <tr><td class="mee"><input type="checkbox" name="product" id="mee" value="mee"> <label for="mee">NuMee Gardenia</label></td></tr>
                     </tr>
                     <tr>
-                        <td>Estimated Budget</td>
-                        <tr><td><input type="radio" name="budget" id="murah" value="zero"> <label for="murah">RM0 - RM5</label></td></tr>
-                        <tr><td><input type="radio" name="budget" id="biasa" value="five"> <label for="biasa">RM5 - RM10</label></td></tr>
-                        <tr><td><input type="radio" name="budget" id="sederhana" value="ten"> <label for="sederhana">RM10 - RM15</label></td></tr>
-                        <tr><td><input type="radio" name="budget" id="mahal" value="fifteen"> <label for="mahal">RM15 and above</label></td></tr>
-                   
+                        <td class="pricefilter">Estimated Budget</td>
+                        <tr><td><input type="checkbox" name="budget" id="murah" value="zero"> <label for="murah">RM0 - RM5</label></td></tr>
+                        <tr><td><input type="checkbox" name="budget" id="biasa" value="five"> <label for="biasa">RM5 - RM10</label></td></tr>
+                        <tr><td><input type="checkbox" name="budget" id="sederhana" value="ten"> <label for="sederhana">RM10 - RM15</label></td></tr>
+                        <tr><td><input type="checkbox" name="budget" id="mahal" value="fifteen"> <label for="mahal">RM15 and above</label></td></tr>
                     </tr>
                 </table>
             </div>
