@@ -219,6 +219,8 @@ option{
 .recipelist
 {
   display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .menuoftheday
 {
@@ -281,7 +283,7 @@ option{
 }
 .fa-solid.fa-thumbs-up
 {
-  color: yellow;
+  color: #ffc107;
 }
 .fa-solid.fa-star{
   color: rgb(255, 196, 0);
@@ -314,11 +316,14 @@ option{
 
 .filter
 {
-  margin: 50px;
+  margin: 50px 50px 50px 40px;
   background-color: var(--white-color);
-  padding: 20px;
+  padding: 20px 30px;
   font-weight: 500;
+  font-size: 15px;
+  max-height: 500px;
 }
+
 .filterby
 {
   text-transform: uppercase;
@@ -329,11 +334,12 @@ option{
   background: none;
   border: none;
   text-transform: uppercase;
-  padding-left: 20px;
+  padding-left: 7px;
+  color: var(--darkgrey-color);
 }
 .ratingfilter
 {
-  padding-top: 10px;
+  padding: 10px 0px;
 }
 .onestar
 {
@@ -341,7 +347,7 @@ option{
 }
 .productfilter
 {
-  padding-top: 10px;
+  padding: 10px 0;
   border-top:  1px solid var(--darkgrey-color);
 }
 .mee
@@ -350,9 +356,48 @@ option{
 }
 .pricefilter
 {
-  padding-top: 10px;
+  padding: 10px 0px;
   border-top:  1px solid var(--darkgrey-color);
-
+}
+.othermenu
+{
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  font-size: 12px;
+  column-gap: 50px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.menugrid
+{
+  padding: 10px;
+  background-color: var(--white-color);
+  border-radius: 25px;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.25);
+  color: var(--darkgrey-color);
+}
+.menuimg
+{
+  width: 100%;
+  border-radius: 25px;
+}
+.menu-title
+{
+  color: var(--black-color);
+  font-weight: 600;
+  padding-right: 80px;
+}
+.menu-rating
+{
+  font-weight: 700;
+}
+.menu-estimated-budget
+{
+  padding: 10px 0px;
+}
+.menu-price, .chef-name
+{
+  font-weight: 600;
 }
 
 /* footer */
