@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varta:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./assets/Gardenia Logo.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="styles/manage-recipe.css" />
+        <title>Manage Recipe</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <img
+                    src="assets/Gardenia Logo.png"
+                    alt="logo"
+                    class="navbar-img"
+                />
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Breakfast</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Lunch</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Dinner</a>
+                </div>
+            </div>
+            <div class="navbar-content">
+                <a href="#" class="login">Login</a
+                ><a href="#" class="signup">Signup</a>
+                <a href="#" class="navbar-burger" onclick="openNav()"
+                    ><i class="fa-solid fa-bars"></i
+                ></a>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div class="navbar-side" id="sidenav">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+                >&times;</a
+            >
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Breakfast</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Lunch</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Dinner</a>
+            </div>
+            <a href="#" class="login">Login</a
+            ><a href="#" class="signup">Signup</a>
+        </div>
+
+        <!-- big container -->
+        <main class="big-container">
+            <!-- sidenav -->
+            <section class="sidenav">
+                <div class="username-section">
+                    <div class="username">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="username-title">Username</p>
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="sidenav-link-container open-border-bottom-right">
+                    <a href="#" class="sidenav-link"
+                        ><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Profile</a
+                    >
+                </div>
+                <div class="sidenav-link-container">
+                    <a href="#" class="sidenav-link active"
+                        ><i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;Manage
+                        Recipes</a
+                    >
+                </div>
+                <div class="sidenav-overall open-border-top-right"></div>
+            </section>
+
+            <!-- profile section -->
+            <section class="recipe-section">
+                <div class="recipe-div-container">
+                    <h2 class="recipe-title">Manage Recipes</h2>
+                    <h5 class="recipe-posts-title">
+                        Latest posts <i class="fa-solid fa-chevron-right"></i>
+                    </h5>
+                    <!-- for latest posts -->
+                    <div class="recipe-posts pad-with-border">
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="recipe-posts-title">
+                        Latest posts <i class="fa-solid fa-chevron-right"></i>
+                    </h5>
+                    <!-- for all posts -->
+                    <div class="recipe-posts">
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                                <div class="recipe-btn-group">
+                                    <button class="recipe-btn-edit">
+                                        Edit
+                                    </button>
+                                    <button class="recipe-btn-delete">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                                <div class="recipe-btn-group">
+                                    <button class="recipe-btn-edit">
+                                        Edit
+                                    </button>
+                                    <button class="recipe-btn-delete">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                                <div class="recipe-btn-group">
+                                    <button class="recipe-btn-edit">
+                                        Edit
+                                    </button>
+                                    <button class="recipe-btn-delete">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                                <div class="recipe-btn-group">
+                                    <button class="recipe-btn-edit">
+                                        Edit
+                                    </button>
+                                    <button class="recipe-btn-delete">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                                <div class="recipe-btn-group">
+                                    <button class="recipe-btn-edit">
+                                        Edit
+                                    </button>
+                                    <button class="recipe-btn-delete">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                                <div class="recipe-btn-group">
+                                    <button class="recipe-btn-edit">
+                                        Edit
+                                    </button>
+                                    <button class="recipe-btn-delete">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                                <div class="recipe-btn-group">
+                                    <button class="recipe-btn-edit">
+                                        Edit
+                                    </button>
+                                    <button class="recipe-btn-delete">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                                <div class="recipe-btn-group">
+                                    <button class="recipe-btn-edit">
+                                        Edit
+                                    </button>
+                                    <button class="recipe-btn-delete">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe-one-post">
+                            <img
+                                src="assets/recipe-img.png"
+                                alt="recipe-post-img"
+                                class="recipe-post-img"
+                            />
+                            <div class="recipe-post-detail">
+                                <h6 class="recipe-post-detail-title">
+                                    Roti lidi campur timun
+                                </h6>
+                                <p class="recipe-post-price">
+                                    <i class="fa-solid fa-money-bill"></i
+                                    >&nbsp;&nbsp;RM 8.50
+                                </p>
+                                <p class="recipe-post-date-posted">
+                                    <i class="fa-solid fa-calendar-week"></i
+                                    >&nbsp;&nbsp;24 November 2022
+                                </p>
+                                <div class="recipe-btn-group">
+                                    <button class="recipe-btn-edit">
+                                        Edit
+                                    </button>
+                                    <button class="recipe-btn-delete">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br />
+                    <a class="recipe-add-new" href="#modal-addnew-recipe">
+                        <i class="fa-solid fa-square-plus"></i>&nbsp;&nbsp;Add
+                        New Recipe
+                    </a>
+                </div>
+                <br /><br />
+            </section>
+        </main>
+
+        <!-- modal add new recipe -->
+        <dialog class="modal-addnew-recipe" id="modal-addnew-recipe">
+            <h2 class="recipe-title">Manage Recipes</h2>
+            <br />
+            <label for="">Recipe Name</label>
+            <input type="text" class="modal-input-block" />
+            <div class="modal-input-two">
+                <div>
+                    <label for="">Gardenia Product</label>
+                    <select name="" id="">
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Estimated Budget</label>
+                    <input type="text" />
+                </div>
+            </div>
+            <label for="">Description</label>
+            <textarea name="" id="" class="modal-input-block"></textarea>
+            <div class="modal-input-two">
+                <div>
+                    <label for="">Ingredients</label>
+                    <textarea name="" id=""></textarea>
+                </div>
+                <div>
+                    <label for="">Cooking Instructions</label>
+                    <textarea name="" id=""></textarea>
+                </div>
+            </div>
+            <div class="modal-group-btn">
+                <button class="modal-cancel-btn">Cancel</button
+                ><button class="modal-add-btn">Add Recipe</button>
+            </div>
+            <span class="modal-close-btn">X</span>
+        </dialog>
+
+        <!-- Footer -->
+        <footer>
+            <div class="desc-contact-location">
+                <div class="logo-desc">
+                    <img
+                        class="footer-image"
+                        src="./assets/Gardenia Logo Nobg.png"
+                        alt=""
+                    />
+                    <br />
+                    <span
+                        >Gardenia recipes provides various <br />recipes of
+                        dessert and food that using <br />our products. This
+                        website will gathered <br />all recipes idea from us and
+                        the <br />Gardenia users across the country.
+                    </span>
+                </div>
+                <div class="contact-email">
+                    <ul>
+                        <li><span class="contact-header">CONTACT US</span></li>
+                        <li>
+                            <span class="contact-emailaddress"
+                                >Gardeniarecipes@gmail.com</span
+                            >
+                        </li>
+                        <li>
+                            <span class="contact-number">03-123123009</span>
+                        </li>
+                        <li class="social-media" ?>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="location-map">
+                    <span class="location-header">OUR LOCATION</span>
+                    <div id="map"></div>
+                </div>
+            </div>
+            <hr class="hr" />
+            <div class="copyright">
+                Copyright &copy; 2022 Gardenia Recipes Website All rights
+                reserved.
+            </div>
+        </footer>
+
+        <script src="scripts/manage-recipe.js"></script>
+    </body>
+</html>

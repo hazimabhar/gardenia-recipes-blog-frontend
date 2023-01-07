@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    --blue-color: #0c1484;
+    --light-blue: #7dbce0;
+    --grey-color: #e2e2e2;
+    --red-color: #fd0001;
+    --darkred-color: #c41212;
+    --lightred-color: #ee7676;
+    --white-color: #ffffff;
+    --darkgrey-color: #5d5d5d;
+    --black-color: #000000;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+/* body */
+body {
+    background-color: var(--grey-color);
+}
+
+/* navbar styling */
+.navbar {
+    margin: 20px 10px;
+    background-color: var(--blue-color);
+    border-radius: 25px;
+    display: flex;
+    padding: 7px 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-content {
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-content:nth-child(1) {
+    margin-left: 25px;
+}
+
+.navbar-content:nth-child(2) {
+    margin-right: 25px;
+}
+
+.navbar-img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.navbar-link-div {
+    margin: 0px 20px;
+    position: relative;
+}
+
+.navbar-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 15px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.navbar-link::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 1s;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+.login,
+.signup {
+    margin: 0px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.login {
+    color: var(--white-color);
+}
+
+.login:hover {
+    color: var(--red-color);
+}
+
+.signup {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    padding: 6px 24px;
+    border-radius: 30px;
+}
+
+.signup:hover {
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
+
+.navbar-burger {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 20px;
+    display: none;
+}
+
+.navbar-side {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--blue-color);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.navbar-side .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 32px;
+    margin-right: 50px;
+}
+
+/* big container styling */
+.big-container {
+    background-color: var(--white-color);
+    max-width: 1360px;
+    margin: 50px auto;
+    border: 1px solid var(--darkgrey-color);
+    border-radius: 25px;
+    display: flex;
+}
+
+/* sidenav styling */
+.sidenav {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.username-section {
+    background-color: var(--blue-color);
+    border-top-left-radius: 25px;
+    padding: 0px 10px;
+}
+
+.open-border-bottom-right {
+    border-bottom-right-radius: 25px;
+}
+
+.open-border-top-right {
+    border-top-right-radius: 25px;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    padding: 20px;
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.username i {
+    font-size: 36px;
+}
+
+.username-title {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.sidenav-link-container {
+    background-color: var(--blue-color);
+}
+
+.sidenav-link {
+    display: block;
+    padding: 10px 15px 10px 10px;
+    margin: 0px 0px 0px 5px;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.active {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+.sidenav-overall {
+    flex-wrap: 1;
+    background-color: var(--blue-color);
+    height: 100%;
+    border-bottom-left-radius: 25px;
+}
+
+/* all about recipes styling */
+.recipe-section {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.recipe-div-container {
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.recipe-title {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--grey-color);
+}
+
+.recipe-posts-title {
+    margin: 10px 0;
+}
+
+.recipe-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.pad-with-border {
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--grey-color);
+}
+
+.recipe-one-post {
+    background-color: var(--grey-color);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recipe-post-img {
+    max-width: 125px;
+    height: auto;
+}
+
+.recipe-posts-title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.recipe-post-detail-title {
+    font-size: 16px;
+}
+
+.recipe-post-price, .recipe-post-date-posted {
+    font-size: 12px;
+}
+
+.recipe-btn-group {
+    padding: 7.5px 5px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.recipe-btn-edit, .recipe-btn-delete {
+    border: 0px transparent;
+    border-radius: 5px;
+}
+
+.recipe-btn-edit {
+    background-color: var(--light-blue);
+}
+
+.recipe-btn-delete {
+    background-color: var(--lightred-color);
+}
+
+.recipe-btn-edit:hover {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.recipe-btn-delete:hover {
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
+
+.recipe-add-new {
+    padding: 7.5px 30px;
+    margin-top: 20px;
+    border: 0px transparent;
+    border-radius: 10px;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.recipe-add-new:hover {
+    outline: 2px solid var(--blue-color);
+    background-color: var(--white-color);
+    color: var(--blue-color);
+    text-decoration: none;
+}
+
+/* modal styling */
+.modal-addnew-recipe {
+    padding: 20px 50px;
+    width: 900px;
+    position: relative;
+    margin: auto;
+    border: 0;
+    border-radius: 10px;
+}
+
+.modal-addnew-recipe::backdrop {
+    background: #5d5d5d;
+    opacity: 0.7;
+}
+
+.modal-input-block {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7.5px 10px;
+    font-size: 16px;
+}
+
+.modal-input-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-input-two div select, .modal-input-two div input {
+    width: 100%;
+    padding: 7.5px 10px;
+    font-size: 16px;
+}
+
+.modal-input-two div textarea {
+    width: 100%;
+    padding: 7.5px 10px;
+    font-size: 16px;
+}
+
+.modal-group-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-group-btn button {
+    font-size: 16px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+
+.modal-cancel-btn {
+    background-color: var(--lightred-color);
+    border: 0;
+    border-radius: 5px;
+}
+
+.modal-cancel-btn:hover {
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
+
+.modal-add-btn {
+    background-color: var(--light-blue);
+    border: 0;
+    border-radius: 5px;
+}
+
+.modal-add-btn:hover {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* footer styling */
+footer
+{
+  margin-top: 100px;
+  height: auto;
+  background-color: #0c1484;
+  color: white;
+}
+.desc-contact-location
+{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.footer-image
+{
+  width: 207px;
+  height: auto;
+}
+.logo-desc
+{
+  text-align: center;
+  font-size: 12px;
+}
+.contact-email
+{
+  text-align: center ;
+  padding-top: 35px;
+}
+.contact-email ul li 
+{
+  list-style: none;
+  padding-bottom: 20px;
+}
+.contact-header
+{
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.contact-emailaddress
+{
+  font-size: 12px;
+  font-weight: 300;
+}
+.contact-number
+{
+  font-size: 12px;
+}
+.social-media
+{
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+.fa-brands.fa-instagram
+{
+  font-size: 30px;
+}
+.fa-brands.fa-facebook-f
+{
+  font-size: 25px;
+}
+.fa-brands.fa-twitter
+{
+  font-size: 25px;
+}
+.fa-brands:hover
+{
+  color: rgb(250,7,9);
+}
+.location-map
+{
+  padding-top: 35px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.location-header
+{
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+#map
+{
+  margin-top: 10px;
+  width: 250px;
+  height: 200px;
+  background-color: #959599;
+}
+.hr{
+  margin-top: 20px;
+  padding: 1px;
+  border: none;
+  background-color: #7dbce0;
+}
+.copyright
+{
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
