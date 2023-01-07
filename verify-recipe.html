@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varta:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./assets/Gardenia Logo.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="styles/verify-recipe.css" />
+        <title>Verify Recipe</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <img
+                    src="assets/Gardenia Logo.png"
+                    alt="logo"
+                    class="navbar-img"
+                />
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Breakfast</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Lunch</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Dinner</a>
+                </div>
+            </div>
+            <div class="navbar-content">
+                <a href="#" class="login">Login</a
+                ><a href="#" class="signup">Signup</a>
+                <a href="#" class="navbar-burger" onclick="openNav()"
+                    ><i class="fa-solid fa-bars"></i
+                ></a>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div class="navbar-side" id="sidenav">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+                >&times;</a
+            >
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Breakfast</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Lunch</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Dinner</a>
+            </div>
+            <a href="#" class="login">Login</a
+            ><a href="#" class="signup">Signup</a>
+        </div>
+
+        <!-- big container -->
+        <main class="big-container">
+            <!-- sidenav -->
+            <section class="sidenav">
+                <div class="username-section">
+                    <div class="username">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="username-title">Username</p>
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="sidenav-link-container open-border-bottom-right">
+                    <a href="#" class="sidenav-link"
+                        ><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Profile</a
+                    >
+                </div>
+                <div class="sidenav-link-container">
+                    <a href="#" class="sidenav-link active"
+                        ><i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;Manage
+                        Recipes</a
+                    >
+                </div>
+                <div class="sidenav-overall open-border-top-right"></div>
+            </section>
+
+            <!-- verify section -->
+            <section class="verify-section">
+                <div class="verify-div-container" style="min-height: 50vh">
+                    <h2 class="verify-title">Verify Recipes</h2>
+                    <h5 class="verify-posts-title">
+                        Latest posts <i class="fa-solid fa-chevron-right"></i>
+                    </h5>
+                    <div class="verify-all-posts">
+                        <div class="verify-post-one">
+                            <div class="verify-post-info">
+                                <img
+                                    src="assets/user-profile-img.png"
+                                    alt="verify-userimg-post"
+                                    class="verify-userimg-post"
+                                />
+                                <div class="verify-detail-post">
+                                    <h3 class="verify-post-title">
+                                        Roti lidi campur timun
+                                    </h3>
+                                    <p class="verify-username-post">
+                                        @cristianomessi
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="display: grid; align-items: center">
+                                <button class="verify-btn-post">Verify</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br /><br />
+            </section>
+        </main>
+
+        <!-- modal add new recipe -->
+        <dialog class="modal-verify-recipe" id="modal-verify-recipe">
+            <h2 class="verify-title">Manage Recipes</h2>
+            <br />
+            <div class="modal-info-div">
+                <i class="fa-solid fa-user"></i>
+                <p class="modal-info-desc">@cristianomessi</p>
+            </div><br>
+            <div class="modal-info-div">
+                <i class="fa-solid fa-bread-slice"></i>
+                <p class="modal-info-desc">Roti lidi campur timun</p>
+            </div><br>
+            <div class="modal-info-div">
+                <i class="fa-solid fa-seedling"></i>
+                <p class="modal-info-desc">Gardenia Original Classic</p>
+            </div><br>
+            <div class="modal-info-div">
+                <i class="fa-solid fa-money-bill"></i>
+                <p class="modal-info-desc">RM 8.50</p>
+            </div><br>
+            <div class="modal-info-div">
+                <i class="fa-solid fa-circle-info"></i>
+                <p class="modal-info-desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias reiciendis sed neque quasi debitis quos quidem!
+                    Voluptate distinctio perspiciatis beatae.
+                </p>
+            </div><br>
+            <div class="modal-info-div">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="modal-info-desc">
+                    1. Ingredient 1 <br />
+                    2. Ingredient 2 <br />
+                    3. Ingredient 3 <br />
+                    4. Ingredient 4 <br />
+                </p>
+            </div><br>
+            <div class="modal-info-div">
+                <i class="fa-solid fa-book"></i>
+                <p class="modal-info-desc">
+                    1. Step 1 <br />
+                    2. Step 2 <br />
+                    3. Step 3 <br />
+                    4. Step 4 <br />
+                </p>
+            </div><br>
+            <div class="modal-group-btn">
+                <button class="modal-cancel-btn">Cancel</button
+                ><button class="modal-verify-btn">Add Recipe</button>
+            </div>
+            <span class="modal-close-btn">X</span>
+        </dialog>
+
+        <!-- Footer -->
+        <footer>
+            <div class="desc-contact-location">
+                <div class="logo-desc">
+                    <img
+                        class="footer-image"
+                        src="./assets/Gardenia Logo Nobg.png"
+                        alt=""
+                    />
+                    <br />
+                    <span
+                        >Gardenia recipes provides various <br />recipes of
+                        dessert and food that using <br />our products. This
+                        website will gathered <br />all recipes idea from us and
+                        the <br />Gardenia users across the country.
+                    </span>
+                </div>
+                <div class="contact-email">
+                    <ul>
+                        <li><span class="contact-header">CONTACT US</span></li>
+                        <li>
+                            <span class="contact-emailaddress"
+                                >Gardeniarecipes@gmail.com</span
+                            >
+                        </li>
+                        <li>
+                            <span class="contact-number">03-123123009</span>
+                        </li>
+                        <li class="social-media" ?>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="location-map">
+                    <span class="location-header">OUR LOCATION</span>
+                    <div id="map"></div>
+                </div>
+            </div>
+            <hr class="hr" />
+            <div class="copyright">
+                Copyright &copy; 2022 Gardenia Recipes Website All rights
+                reserved.
+            </div>
+        </footer>
+
+        <script src="scripts/verify-recipe.js"></script>
+    </body>
+</html>
