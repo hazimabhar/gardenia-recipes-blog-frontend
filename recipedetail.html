@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="./assets/icon-gardenia.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/recipedetail.css">
+    <title>Recipe Detail</title>
+</head>
+<body>
+         <!-- Navbar -->
+         <nav class="navbar">
+            <div class="navbar-content">
+                <img
+                    src="assets/Gardenia Logo.png"
+                    alt="logo"
+                    class="navbar-img"
+                />
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Breakfast</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Lunch</a>
+                </div>
+                <div class="navbar-link-div">
+                    <a href="#" class="navbar-link">Dinner</a>
+                </div>
+            </div>
+            <div class="navbar-content">
+                <a href="#" class="login">Login</a
+                ><a href="#" class="signup">Signup</a>
+                <a href="#" class="navbar-burger" onclick="openNav()"
+                    ><i class="fa-solid fa-bars"></i
+                ></a>
+            </div>
+        </nav>
+    
+        <!-- Sidebar -->
+        <div class="navbar-side" id="sidenav">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"
+                >&times;</a
+            >
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Breakfast</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Lunch</a>
+            </div>
+            <div class="navbar-link-div">
+                <a href="#" class="navbar-link">Dinner</a>
+            </div>
+            <a href="#" class="login">Login</a
+            ><a href="#" class="signup">Signup</a>
+        </div>
+        <div class="navhistory">
+            <ul class="breadcrumb">
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="home"><a href="recipelist.html">Recipe List</a></li>
+                <li class="current">Burger Stadium guna roti gardenia</li>
+            </ul>
+        </div>
+        <!-- content -->
+        <div class="content">
+            <div class="topcontent">
+                <div class="imgcontainer">
+                    <img class="recipeimg" src="./assets/bread/Bread-Umpa.png" alt="">
+                </div>
+                <div class="recipedetail">
+                    <h3>Burger Stadium guna roti gardenia</h3>
+                    <span class="menu-of-the-day">Menu of The Day! <i class="fa-solid fa-thumbs-up"></i></span>
+                    <div class="menu-estimated-budget">
+                        <span>
+                            <div class="dollarsign">
+                                <i class="fa-sharp fa-solid fa-dollar-sign"></i><i class="fa-sharp fa-solid fa-dollar-sign"></i>
+                            </div>
+                        Estimated Budget:
+                        <span class="menu-price">
+                            RM 8.50
+                        </span>
+                        </span>
+                    </div>
+                    <span class="recipe-by"><i class="fa-solid fa-user"></i>Recipe By:</span><span class="chef-name">Ahmad Maslan</span>
+                    <div class="upload-rating">
+                        <span class="date"><i class="fa-solid fa-clock"></i></i>Uploded On:</span><span class="date">03 December 2018</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i>4.6 (400+)</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="contentline">
+            <div class="botcontent">
+                <div class="threebutton">
+                   <p><button class="ingredient">Ingredients</button></p>
+                   <p><button class="instruction">Cooking Instruction</button></p>
+                    <p><button class="detail">Product Details</button></p>
+                </div>
+                <div class="ingredient-instruction-detail">
+                    1.hazimhensem
+                    <br>1.hazimhensem
+                    <br>1.hazimhensem
+                </div>
+            </div>
+            <div class="feedback">
+                <p class="feedbackheadline">Rate Our Recipe</p>
+                <p class="feedbacksubheadline">Give your rating for this recipe to help us improve our recipe content</p>
+                <div class="star">
+                    <ul>
+                        <li><input type="radio" name="rating" id="fivestar"><label for="fivestar"><i class="fa-solid fa-star"></i> 5 stars</label></li>
+                        <li><input type="radio" name="rating" id="fourstar"><label for="fourstar"><i class="fa-solid fa-star"></i> 4 stars</label></li>
+                        <li><input type="radio" name="rating" id="threeestar"><label for="threestar"><i class="fa-solid fa-star"></i> 3 stars</label></li>
+                        <li><input type="radio" name="rating" id="twostar"><label for="twostar"><i class="fa-solid fa-star"></i> 2 stars</label></li>
+                        <li><input type="radio" name="rating" id="onestar"><label for="onestar"><i class="fa-solid fa-star"></i> 1 stars</label></li>
+                    </ul>
+                </div>
+                <button class="submitfeedback">Submit</button>
+            </div>
+        </div>
+        <!-- footer -->
+            <footer>
+                <div class="desc-contact-location">
+                    <div class="logo-desc">
+                        <img class="footer-image" src="./assets/Gardenia Logo Nobg.png" alt="">
+                        <br>
+                        <span>Gardenia recipes provides various 
+                            <br>recipes of dessert and food that using 
+                            <br>our products. This website will gathered 
+                            <br>all recipes idea from us and the 
+                            <br>Gardenia users across the country.
+                         </span>
+                    </div>
+                    <div class="contact-email">
+                        <ul>
+                            <li><span class="contact-header">CONTACT US</span></li>
+                            <li><span class="contact-emailaddress">Gardeniarecipes@gmail.com</span></li>
+                            <li><span class="contact-number">03-123123009</span></li>
+                            <li class="social-media"?>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </li>
+                        </ul>
+        
+                    </div>
+                    <div class="location-map">
+                        <span class="location-header">OUR LOCATION</span> 
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <hr class="footerline">
+                <div class="copyright">
+                    Copyright &copy; 2022 Gardenia Recipes Website All rights reserved.
+                </div>
+            </footer>
+</body>
+</html>
