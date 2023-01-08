@@ -165,7 +165,7 @@
                     </div>
 
                     <h5 class="recipe-posts-title">
-                        Latest posts <i class="fa-solid fa-chevron-right"></i>
+                        All posts <i class="fa-solid fa-chevron-right"></i>
                     </h5>
                     <!-- for all posts -->
                     <div class="recipe-posts">
@@ -445,37 +445,85 @@
             <h2 class="recipe-title">Manage Recipes</h2>
             <br />
             <label for="">Recipe Name</label>
-            <input type="text" class="modal-input-block" />
+            <input
+                type="text"
+                class="modal-input-block"
+                placeholder="Enter your new recipe name"
+                id="recipeName"
+            />
             <div class="modal-input-two">
                 <div>
                     <label for="">Gardenia Product</label>
-                    <select name="" id="">
-                        <option value=""></option>
-                        <option value=""></option>
+                    <select name="" id="gardeniaProduct">
+                        <option value="">Choose Gardenia product used</option>
+                        <option value="Gardenia Original Classic">
+                            Gardenia Original Classic
+                        </option>
+                        <option value="Gardenia A.Rosie's Kaya">
+                            Gardenia A.Rosie's Kaya
+                        </option>
+                        <option value="Gardenia Roll-Up Wraps">
+                            Gardenia Roll-Up Wraps
+                        </option>
+                        <option value="NuMee Gardenia">NuMee Gardenia</option>
                     </select>
                 </div>
                 <div>
                     <label for="">Estimated Budget</label>
-                    <input type="text" />
+                    <input
+                        type="number"
+                        placeholder="Enter your estimated budget"
+                        id="estimatedBudget"
+                    />
                 </div>
             </div>
             <label for="">Description</label>
-            <textarea name="" id="" class="modal-input-block"></textarea>
+            <textarea
+                name=""
+                id="description"
+                class="modal-input-block"
+            ></textarea>
             <div class="modal-input-two">
                 <div>
                     <label for="">Ingredients</label>
-                    <textarea name="" id=""></textarea>
+                    <textarea
+                        name=""
+                        id="ingredients"
+                        placeholder="1. Ingredient A&#10;2. Ingredient B&#10;3. Ingredient C&#10;..."
+                    ></textarea>
                 </div>
                 <div>
                     <label for="">Cooking Instructions</label>
-                    <textarea name="" id=""></textarea>
+                    <textarea
+                        name=""
+                        id="cookInstruct"
+                        placeholder="1. Step A&#10;2. Step B&#10;3. Step C&#10;..."
+                    ></textarea>
                 </div>
             </div>
+            <label for="">Recipe Image (One image only)</label>
+            <input
+                type="file"
+                name=""
+                id="recipeImg"
+                class="modal-input-block"
+            />
             <div class="modal-group-btn">
                 <button class="modal-cancel-btn">Cancel</button
-                ><button class="modal-add-btn">Add Recipe</button>
+                ><button class="modal-add-btn" id="modal-add-btn">
+                    Add Recipe
+                </button>
             </div>
             <span class="modal-close-btn">X</span>
+        </dialog>
+
+        <!-- modal success -->
+        <dialog class="modal-addnew-recipe" id="modal-success">
+            <form method="dialog">
+                <h3>Recipe successfully added</h3>
+                <br />
+                <button type="submit" class="modal-success-btn">Ok</button>
+            </form>
         </dialog>
 
         <!-- Footer -->
@@ -525,6 +573,8 @@
             </div>
         </footer>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pocketbase/0.9.1/pocketbase.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
         <script src="scripts/manage-recipe.js"></script>
     </body>
 </html>

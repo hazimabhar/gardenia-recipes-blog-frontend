@@ -12,6 +12,7 @@
     --darkgrey-color: #5d5d5d;
     --black-color: #000000;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 button {
@@ -333,6 +334,7 @@ body {
     margin: auto;
     border: 0;
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 .modal-addnew-recipe::backdrop {
@@ -340,7 +342,7 @@ body {
     opacity: 0.7;
 }
 
-.modal-input-block {
+.modal-input-block, .modal-input-block::file-selector-button {
     display: block;
     width: 100%;
     margin-bottom: 20px;
@@ -365,6 +367,8 @@ body {
     width: 100%;
     padding: 7.5px 10px;
     font-size: 16px;
+    height: 400px;
+    white-space: pre-wrap;
 }
 
 .modal-group-btn {
@@ -407,6 +411,32 @@ body {
     top: 20px;
     right: 20px;
     cursor: pointer;
+}
+
+.modal-success-btn {
+    background-color: var(--light-blue);
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 25px;
+}
+
+.modal-loading {
+  border: 8px solid var(--white-color);
+  border-top: 8px solid var(--darkgrey-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.modal-success-btn:hover {
+    background-color: var(--blue-color);
+    color: var(--white-color);
 }
 
 /* footer styling */
