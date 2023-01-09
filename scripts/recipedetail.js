@@ -1,3 +1,11 @@
+if (window.localStorage.getItem("userId")) {
+    document.querySelector("#authSection").innerHTML = `
+    <a href="profile.html" class="login">${window.localStorage.getItem(
+        "username"
+    )}</a>
+    `;
+}
+
 const recipeId = new URLSearchParams(window.location.search).get("recipeId");
 const containerTopContent = document.querySelector(".topcontent");
 const containerBotContent = document.querySelector(".botcontent");
@@ -42,7 +50,8 @@ const renderDetails = async () => {
         `http://localhost:3000/recipes?id=${recipeId}`
     );
 
-    const recipe = await resRecipe.json();console.log(recipe);
+    const recipe = await resRecipe.json();
+    console.log(recipe);
 
     const resUser = await fetch(
         `http://localhost:3000/users?id=${recipe[0].userId}`
@@ -153,8 +162,7 @@ function descCookInstruct() {
     const containerDetail = document.querySelector(
         ".ingredient-instruction-detail"
     );
-    containerDetail.innerHTML =
-        "Cooking Instructions\n" + cookInstruct;
+    containerDetail.innerHTML = "Cooking Instructions\n" + cookInstruct;
 }
 
 function descRecipeDetails() {
@@ -170,5 +178,5 @@ function descRecipeDetails() {
         "</div>" +
         "<div><strong>Description:</strong> " +
         description;
-        "</div>";
+    ("</div>");
 }

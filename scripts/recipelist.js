@@ -1,3 +1,11 @@
+if (window.localStorage.getItem("userId")) {
+    document.querySelector("#authSection").innerHTML = `
+    <a href="profile.html" class="login">${window.localStorage.getItem(
+        "username"
+    )}</a>
+    `;
+}
+
 const containerOtherMenu = document.querySelector("div.othermenu");
 
 const renderDetails = async () => {

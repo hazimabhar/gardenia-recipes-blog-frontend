@@ -46,6 +46,10 @@ document.querySelector("#signupForm").addEventListener("submit", async (e) => {
     document.querySelector("#signupForm").style.cursor = "default";
 
     window.localStorage.setItem("userId", id);
+    window.localStorage.setItem("fullName", fullName);
+    window.localStorage.setItem("email", email);
+    window.localStorage.setItem("username", username);
+    window.localStorage.setItem("role", role);
 
     window.location.href = "profile.html";
 

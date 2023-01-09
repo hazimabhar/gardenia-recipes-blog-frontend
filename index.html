@@ -1,115 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="shortcut icon" href="./assets/icon-gardenia.png" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/homepage.css">
-    <title>Home Page</title>
-</head>
-<body>
-    <header>
-        <img class="background-image" src="./assets/landing_page.png" alt="background">
-        <div class="navigation-bar">
-            <a href="index.html"><img class="navbar-logo" src="./assets/Gardenia Logo.png" alt="logo"></a>
-            <ul class="leftside-navigation-bar">
-                <li class="breakfast"><a href="recipelist.html">Breakfast</a></li>
-                <li class="lunch"><a href="recipelist.html">Lunch</a></li>
-                <li class="dinner"><a href="recipelist.html">Dinner</a></li>
-            </ul>
-            <ul class="rightside-navigation-bar">
-                <li class="login"><a href="login.html">Login</a></li>
-                <li class="signup"><a href="signup.html">Sign Up</a></li>
-            </ul>
-        </div>
-        <img class="sungguhenak" src="./assets/sungguh enakkk.png" alt="sungguhenak">
-    </header>
-    <div class="content">
-        <div class="logo-search-sort">
-            <img class="content-logo" src="./assets/Gardenia Logo Nobg.png" alt="logo">
-            <form class="search-form" action=""><input class="search" type="text" placeholder="Search recipes and more..."><span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span></form>
-            <div class="sort">
-                <span>Sort By:</span>
-                <select name="sort" id="sort">
-                    <option value="newest">Newest</option>
-                    <option value="mostrated">Most Rated</option>
-                    <option value="budget">Budget</option>
-                </select>
-            </div>
-        </div>
-        <div class="product-spotlight-subspotlight">
-            <div class="product">
-                <ul>
-                    <li><a href="#"> &nbsp;Original Classic</a></li>
-                    <li><a href="#">&nbsp;A.Rosie's Kaya &nbsp;</a></li>
-                    <li><a href="#">&nbsp;Roll-Up Wraps &nbsp;</a></li>
-                    <li><a href="#">NuMee Gardenia</a></li>
-                </ul>
-            </div>
-            <div class="spotlight">
-                <img class="spotlight-image" src="./assets/roti1.jpg" alt="spotlight">
-                <div class="title-menuoftheday-rating">
-                    <span class="spotlight-title">Burger Stadium Guna Roti Gardenia</span>
-                    <span class="spotlight-menu-of-the-day">Menu of The Day <i class="fa-solid fa-thumbs-up"></i></span>
-                    <span class="spotlight-rating"><i class="fa-solid fa-star"></i>4.6 (400+)</span>
-                </div>
-                <ul class="budget-recipe">
-                    <li><span class="spotlight-estimated-budget"><i class="fa-sharp fa-solid fa-dollar-sign"></i><i class="fa-sharp fa-solid fa-dollar-sign"></i> &nbsp; Estimated Budget:</span><span class="spotlight-price">RM 8.50</span></li>
-                    <li><span class="spotlight-recipe-by"><i class="fa-solid fa-user"></i>Recipe By:</span><span class="chef-name">Ahmad Maslan</span></li>
-                </ul>
-            </div>
-            <div class="subspotlight">
-                <div class="subspotlight1">
-                    <img class="subspotlight1-image" src="./assets/roti2.jpg" alt="subspotlight">
-                    <p class="sandwich-telur">Sandwich Telur</p>
-                    <a href="#" class="seemore-sub1">See More</a>
-                </div>
-                <div class="subspotlight2">
-                    <img class="subspotlight2-image" src="./assets/roti3.jpg" alt="subspotlight">
-                    <p class="sandwich-telurmata">Sandwich telur diatas</p>
-                    <a href="#" class="seemore-sub2">See More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="desc-contact-location">
-            <div class="logo-desc">
-                <img class="footer-image" src="./assets/Gardenia Logo Nobg.png" alt="">
-                <br>
-                <span>Gardenia recipes provides various 
-                    <br>recipes of dessert and food that using 
-                    <br>our products. This website will gathered 
-                    <br>all recipes idea from us and the 
-                    <br>Gardenia users across the country.
-                 </span>
-            </div>
-            <div class="contact-email">
-                <ul>
-                    <li><span class="contact-header">CONTACT US</span></li>
-                    <li><span class="contact-emailaddress">Gardeniarecipes@gmail.com</span></li>
-                    <li><span class="contact-number">03-123123009</span></li>
-                    <li class="social-media"?>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-twitter"></i>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varta:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./assets/icon-gardenia.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./styles/homepage.css" />
+        <title>Home Page</title>
+    </head>
+    <body>
+        <header>
+            <img
+                class="background-image"
+                src="./assets/landing_page.png"
+                alt="background"
+            />
+            <div class="navigation-bar">
+                <a href="index.html"
+                    ><img
+                        class="navbar-logo"
+                        src="./assets/Gardenia Logo.png"
+                        alt="logo"
+                /></a>
+                <ul class="leftside-navigation-bar">
+                    <li class="breakfast">
+                        <a href="recipelist.html">Breakfast</a>
                     </li>
+                    <li class="lunch"><a href="recipelist.html">Lunch</a></li>
+                    <li class="dinner"><a href="recipelist.html">Dinner</a></li>
                 </ul>
-
+                <ul class="rightside-navigation-bar" id="authSection">
+                    <li class="login"><a href="login.html">Login</a></li>
+                    <li class="signup"><a href="signup.html">Sign Up</a></li>
+                </ul>
             </div>
-            <div class="location-map">
-                <span class="location-header">OUR LOCATION</span> 
-                <div id="map"></div>
+            <img
+                class="sungguhenak"
+                src="./assets/sungguh enakkk.png"
+                alt="sungguhenak"
+            />
+        </header>
+        <div class="content">
+            <div class="logo-search-sort">
+                <img
+                    class="content-logo"
+                    src="./assets/Gardenia Logo Nobg.png"
+                    alt="logo"
+                />
+                <form class="search-form" action="">
+                    <input
+                        class="search"
+                        type="text"
+                        placeholder="Search recipes and more..."
+                    /><span class="search-icon"
+                        ><i class="fa-solid fa-magnifying-glass"></i
+                    ></span>
+                </form>
+                <div class="sort">
+                    <span>Sort By:</span>
+                    <select name="sort" id="sort">
+                        <option value="newest">Newest</option>
+                        <option value="mostrated">Most Rated</option>
+                        <option value="budget">Budget</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-spotlight-subspotlight">
+                <div class="product">
+                    <ul>
+                        <li><a href="#"> &nbsp;Original Classic</a></li>
+                        <li><a href="#">&nbsp;A.Rosie's Kaya &nbsp;</a></li>
+                        <li><a href="#">&nbsp;Roll-Up Wraps &nbsp;</a></li>
+                        <li><a href="#">NuMee Gardenia</a></li>
+                    </ul>
+                </div>
+                <div class="spotlight">
+                    <img
+                        class="spotlight-image"
+                        src="./assets/roti1.jpg"
+                        alt="spotlight"
+                    />
+                    <div class="title-menuoftheday-rating">
+                        <span class="spotlight-title"
+                            >Burger Stadium Guna Roti Gardenia</span
+                        >
+                        <span class="spotlight-menu-of-the-day"
+                            >Menu of The Day
+                            <i class="fa-solid fa-thumbs-up"></i
+                        ></span>
+                        <span class="spotlight-rating"
+                            ><i class="fa-solid fa-star"></i>4.6 (400+)</span
+                        >
+                    </div>
+                    <ul class="budget-recipe">
+                        <li>
+                            <span class="spotlight-estimated-budget"
+                                ><i class="fa-sharp fa-solid fa-dollar-sign"></i
+                                ><i
+                                    class="fa-sharp fa-solid fa-dollar-sign"
+                                ></i>
+                                &nbsp; Estimated Budget:</span
+                            ><span class="spotlight-price">RM 8.50</span>
+                        </li>
+                        <li>
+                            <span class="spotlight-recipe-by"
+                                ><i class="fa-solid fa-user"></i>Recipe
+                                By:</span
+                            ><span class="chef-name">Ahmad Maslan</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subspotlight">
+                    <div class="subspotlight1">
+                        <img
+                            class="subspotlight1-image"
+                            src="./assets/roti2.jpg"
+                            alt="subspotlight"
+                        />
+                        <p class="sandwich-telur">Sandwich Telur</p>
+                        <a href="#" class="seemore-sub1">See More</a>
+                    </div>
+                    <div class="subspotlight2">
+                        <img
+                            class="subspotlight2-image"
+                            src="./assets/roti3.jpg"
+                            alt="subspotlight"
+                        />
+                        <p class="sandwich-telurmata">Sandwich telur diatas</p>
+                        <a href="#" class="seemore-sub2">See More</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="copyright">
-            Copyright &copy; 2022 Gardenia Recipes Website All rights reserved.
-        </div>
-    </footer>
+        <footer>
+            <div class="desc-contact-location">
+                <div class="logo-desc">
+                    <img
+                        class="footer-image"
+                        src="./assets/Gardenia Logo Nobg.png"
+                        alt=""
+                    />
+                    <br />
+                    <span
+                        >Gardenia recipes provides various <br />recipes of
+                        dessert and food that using <br />our products. This
+                        website will gathered <br />all recipes idea from us and
+                        the <br />Gardenia users across the country.
+                    </span>
+                </div>
+                <div class="contact-email">
+                    <ul>
+                        <li><span class="contact-header">CONTACT US</span></li>
+                        <li>
+                            <span class="contact-emailaddress"
+                                >Gardeniarecipes@gmail.com</span
+                            >
+                        </li>
+                        <li>
+                            <span class="contact-number">03-123123009</span>
+                        </li>
+                        <li class="social-media" ?>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="location-map">
+                    <span class="location-header">OUR LOCATION</span>
+                    <div id="map"></div>
+                </div>
+            </div>
+            <hr />
+            <div class="copyright">
+                Copyright &copy; 2022 Gardenia Recipes Website All rights
+                reserved.
+            </div>
+        </footer>
 
-</body>
+        <script>
+            if (window.localStorage.getItem("userId")) {
+                document.querySelector("#authSection").innerHTML = `
+                <li class="login"><a href="profile.html">${window.localStorage.getItem(
+                    "username"
+                )}</a></li>
+                `;
+            }
+        </script>
+    </body>
 </html>

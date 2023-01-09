@@ -1,3 +1,58 @@
+if (!window.localStorage.getItem("userId")) {
+    window.location.href = "login.html";
+} else {
+    document.querySelector("#authSection").innerHTML = `
+    <a href="profile.html" class="login">${window.localStorage.getItem(
+        "username"
+    )}</a>
+    `;
+}
+
+if (window.localStorage.getItem("role") == "admin") {
+    document.querySelector("section.sidenav").innerHTML = `
+    <div class="username-section">
+        <div class="username">
+            <i class="fa-solid fa-circle-user"></i>
+            <p class="username-title">Username</p>
+        </div>
+        <br /><br />
+    </div>
+    <div class="sidenav-link-container open-border-bottom-right">
+        <a href="profile.html" class="sidenav-link"
+            ><i class="fa-solid fa-user"></i>&nbsp;&nbsp;Profile</a
+        >
+    </div>
+    <div class="sidenav-link-container">
+        <a href="manage-recipe.html" class="sidenav-link active"
+            ><i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;Manage
+            Recipes</a
+        >
+    </div>
+    <div class="sidenav-link-container open-border-top-right">
+        <a href="verify-recipe.html" class="sidenav-link"
+            ><i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;Verify
+            Recipes</a
+        >
+    </div>
+    <div class="sidenav-link-container ">
+        <a href="#" class="sidenav-link"
+            onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;&nbsp;Logout</a
+        >
+    </div>
+    <div class="sidenav-overall"></div>
+    `;
+}
+
+function logout() {
+    window.localStorage.removeItem("userId", "");
+    window.localStorage.removeItem("fullName", "");
+    window.localStorage.removeItem("email", "");
+    window.localStorage.removeItem("username", "");
+    window.localStorage.removeItem("role", "");
+
+    window.location.href = "login.html";
+}
+
 const pb = new PocketBase("http://127.0.0.1:8090");
 
 const modal = document.querySelector("#modal-addnew-recipe");
@@ -57,7 +112,7 @@ addRecipe.addEventListener("click", async () => {
             createdRecord.image,
         createdDate,
         isVerified: false,
-        userId
+        userId,
     };
 
     modal.innerHTML = `<div class="modal-loading"></div>`;
