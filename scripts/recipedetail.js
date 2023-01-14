@@ -43,7 +43,7 @@ async function submitFeedback(recipeId) {
 
     alert("You have successfully rated this recipe.");
 
-    window.location.href = "recipedetail.html";
+    window.location.href = `recipedetail.html?recipeId=${recipeId}`;
 }
 
 const renderDetails = async () => {

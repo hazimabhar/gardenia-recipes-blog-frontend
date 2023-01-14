@@ -77,7 +77,6 @@ if (!window.localStorage.getItem("userId")) {
 }
 
 async function updatePostsAndLikes() {
-
     const resRecipe = await fetch(
         `https://localhost:7296/api/recipes/userId/${window.localStorage.getItem(
             "userId"
@@ -86,26 +85,21 @@ async function updatePostsAndLikes() {
     );
 
     const recipes = await resRecipe.json();
-    console.log(recipes);
 
-    if (recipes.length > 0) {
-    recipes.forEach(async (recipe) => {
-        const resRating = await fetch(
-            `https://localhost:7296/api/ratings/recipeId/${recipe.id}/info`,
-            {
-                mode: "cors",
-            }
-        );
+    const resRating = await fetch(
+        `https://localhost:7296/api/ratings/userId/${window.localStorage.getItem(
+            "userId"
+        )}/recipe/info`,
+        {
+            mode: "cors",
+        }
+    );
 
-        const ratingInfo = await resRating.json();
-        const { count, average } = ratingInfo;
+    const rating = await resRating.json();
+    const { average, count } = rating;
+    console.log(recipes, rating);
 
-        let averageRating = parseFloat(document.querySelector(".likes-detail-total").textContent)
-        averageRating += average;
-        document.querySelector(".likes-detail-total").textContent = averageRating;
-    });   
-    }
-
+    document.querySelector(".likes-detail-total").textContent = average.toFixed(1);
     document.querySelector(".posts-detail-total").textContent = recipes.length;
 }
 
