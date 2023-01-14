@@ -89,8 +89,9 @@
                     >
                 </div>
                 <div class="sidenav-link-container open-border-top-right">
-                    <a href="#" class="sidenav-link"
-                        onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;&nbsp;Logout</a
+                    <a href="#" class="sidenav-link" onclick="logout()"
+                        ><i class="fa-solid fa-arrow-right-from-bracket"></i
+                        >&nbsp;&nbsp;Logout</a
                     >
                 </div>
                 <div class="sidenav-overall"></div>
@@ -104,8 +105,11 @@
                         Latest posts <i class="fa-solid fa-chevron-right"></i>
                     </h5>
                     <!-- for latest posts -->
-                    <div class="recipe-posts pad-with-border">
-                        <div class="recipe-one-post">
+                    <div
+                        class="recipe-posts pad-with-border"
+                        id="latestContainer"
+                    >
+                        <!-- <div class="recipe-one-post">
                             <img
                                 src="assets/recipe-img.png"
                                 alt="recipe-post-img"
@@ -166,15 +170,15 @@
                                     >&nbsp;&nbsp;24 November 2022
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <h5 class="recipe-posts-title">
                         All posts <i class="fa-solid fa-chevron-right"></i>
                     </h5>
                     <!-- for all posts -->
-                    <div class="recipe-posts">
-                        <div class="recipe-one-post">
+                    <div class="recipe-posts" id="allContainer">
+                        <!-- <div class="recipe-one-post">
                             <img
                                 src="assets/recipe-img.png"
                                 alt="recipe-post-img"
@@ -433,10 +437,14 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <br /><br />
-                    <a class="recipe-add-new" href="#modal-addnew-recipe">
+                    <a
+                        class="recipe-add-new"
+                        id="recipe-add-new"
+                        href="#modal-addnew-recipe"
+                    >
                         <i class="fa-solid fa-square-plus"></i>&nbsp;&nbsp;Add
                         New Recipe
                     </a>
@@ -506,6 +514,13 @@
                     ></textarea>
                 </div>
             </div>
+            <label for="">Recipe Category</label>
+            <select name="" id="category" class="modal-input-block">
+                <option value="">Choose cateogry of recipe</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+            </select>
             <label for="">Recipe Image (One image only)</label>
             <input
                 type="file"
@@ -514,12 +529,13 @@
                 class="modal-input-block"
             />
             <div class="modal-group-btn">
-                <button class="modal-cancel-btn">Cancel</button
+                <button class="modal-cancel-btn" id="modal-cancel-btn">
+                    Cancel</button
                 ><button class="modal-add-btn" id="modal-add-btn">
                     Add Recipe
                 </button>
             </div>
-            <span class="modal-close-btn">X</span>
+            <span class="modal-close-btn" id="modal-close-btn">X</span>
         </dialog>
 
         <!-- modal success -->

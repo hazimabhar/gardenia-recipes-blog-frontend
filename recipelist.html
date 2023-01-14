@@ -30,13 +30,13 @@
                     class="navbar-img"
                 />
                 <div class="navbar-link-div">
-                    <a href="recipelist.html" class="navbar-link">Breakfast</a>
+                    <a href="recipelist.html?category=Breakfast" class="navbar-link">Breakfast</a>
                 </div>
                 <div class="navbar-link-div">
-                    <a href="recipelist.html" class="navbar-link">Lunch</a>
+                    <a href="recipelist.html?category=Lunch" class="navbar-link">Lunch</a>
                 </div>
                 <div class="navbar-link-div">
-                    <a href="recipelist.html" class="navbar-link">Dinner</a>
+                    <a href="recipelist.html?category=Dinner" class="navbar-link">Dinner</a>
                 </div>
             </div>
             <div class="navbar-content" id="authSection">
@@ -54,13 +54,13 @@
                 >&times;</a
             >
             <div class="navbar-link-div">
-                <a href="recipelist.html" class="navbar-link">Breakfast</a>
+                <a href="recipelist.html?category=Breakfast" class="navbar-link">Breakfast</a>
             </div>
             <div class="navbar-link-div">
-                <a href="recipelist.html" class="navbar-link">Lunch</a>
+                <a href="recipelist.html?category=Lunch" class="navbar-link">Lunch</a>
             </div>
             <div class="navbar-link-div">
-                <a href="recipelist.html" class="navbar-link">Dinner</a>
+                <a href="recipelist.html?category=Dinner" class="navbar-link">Dinner</a>
             </div>
             <a href="login.html" class="login">Login</a
             ><a href="signup.html" class="signup">Signup</a>
@@ -73,14 +73,15 @@
         </div>
         <div class="content">
             <div class="search-sort">
-                <form class="search-form" action="">
+                <form class="search-form">
                     <input
                         class="search"
                         type="text"
+                        name="q"
                         placeholder="Search recipes and more..."
-                    /><span class="search-icon"
+                    /><button class="search-icon"
                         ><i class="fa-solid fa-magnifying-glass"></i
-                    ></span>
+                    ></button>
                 </form>
                 <div class="sort">
                     <span>Sort By:</span>
@@ -94,7 +95,7 @@
             <div class="recipelist">
                 <div class="recipe">
                     <div class="menuoftheday">
-                        <img
+                        <!-- <img
                             class="breakfastspotlight"
                             src="./assets/bread/garlic rs.png"
                             alt=""
@@ -171,7 +172,7 @@
                                     </tr>
                                 </table>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="othermenu">
                         <!-- <div class="menugrid">

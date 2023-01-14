@@ -180,6 +180,8 @@ ul.breadcrumb li a:hover {
 .search-icon {
     position: absolute;
     margin: 25px 0 0 1090px;
+    background-color: transparent;
+    border: 0px transparent;
 }
 .sort {
     color: white;

@@ -259,6 +259,10 @@ body {
     gap: 10px;
 }
 
+.recipe-post-detail {
+    flex-grow: 1;
+}
+
 .recipe-post-img {
     max-width: 125px;
     height: auto;

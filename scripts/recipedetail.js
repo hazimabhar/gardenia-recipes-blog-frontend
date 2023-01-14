@@ -21,7 +21,6 @@ if (window.localStorage.getItem("isRate" + recipeId)) {
 }
 
 async function submitFeedback(recipeId) {
-    const id = self.crypto.randomUUID();
     const star = document.querySelector("input[name='rating']:checked").value;
 
     if (!star) {
@@ -29,52 +28,49 @@ async function submitFeedback(recipeId) {
     }
 
     const newRating = {
-        id,
         star,
         recipeId,
     };
 
-    await fetch("http://localhost:3000/ratings", {
+    await fetch("https://localhost:7296/api/ratings", {
         method: "POST",
         body: JSON.stringify(newRating),
         headers: { "Content-Type": "application/json" },
+        mode: "cors",
     });
 
     window.localStorage.setItem(`isRate${recipeId}`, "true");
 
-    containerFeedback.innerHTML = `<p class="feedbackheadline">You have successfully rated this recipe.</p>`;
+    alert("You have successfully rated this recipe.");
+
+    window.location.href = "recipedetail.html";
 }
 
 const renderDetails = async () => {
+
     const resRecipe = await fetch(
-        `http://localhost:3000/recipes?id=${recipeId}`
+        `https://localhost:7296/api/recipes/id/${recipeId}`,
+        { mode: "cors" }
     );
 
     const recipe = await resRecipe.json();
-    console.log(recipe);
 
     const resUser = await fetch(
-        `http://localhost:3000/users?id=${recipe[0].userId}`
+        `https://localhost:7296/api/recipes/id/${recipeId}/user`,
+        { mode: "cors" }
     );
 
     const user = await resUser.json();
 
     const resRating = await fetch(
-        `http://localhost:3000/ratings?recipeId=${recipeId}`
+        `https://localhost:7296/api/ratings/recipeId/${recipeId}/info`,
+        {
+            mode: "cors",
+        }
     );
 
-    const ratings = await resRating.json();
-
-    let allRating = 0;
-    let countRating = 0;
-
-    ratings.forEach((rating) => {
-        countRating += 1;
-        allRating += rating.star;
-    });
-
-    let averageRating = allRating / countRating;
-    averageRating = averageRating.toFixed(1);
+    const ratingInfo = await resRating.json();
+    const { count, average } = ratingInfo;
 
     let templateTopContent = `
     <div class="imgcontainer">
@@ -109,7 +105,7 @@ const renderDetails = async () => {
                 ><i class="fa-solid fa-clock"></i>Uploded On:</span
             ><span class="date">${recipe[0].createdDate}</span>
             <span class="rating"
-                ><i class="fa-solid fa-star"></i>${averageRating} (${countRating})</span
+                ><i class="fa-solid fa-star"></i>${average} (${count})</span
             >
         </div>
     </div>
@@ -141,6 +137,11 @@ const renderDetails = async () => {
     <button class="submitfeedback" onclick="submitFeedback('${recipe[0].id}')">Submit</button>
     `;
 
+    document.querySelector("ul.breadcrumb").innerHTML = `
+    <li class="home"><a href="index.html">Home</a></li>
+    <li class="home"><a href="recipelist.html?category=${recipe[0].category}">${recipe[0].category}</a></li>
+    <li class="current">${recipeName}</li>
+    `;
     containerTopContent.innerHTML = templateTopContent;
     containerBotContent.innerHTML = templateBotContent;
 

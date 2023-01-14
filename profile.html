@@ -89,8 +89,9 @@
                     >
                 </div>
                 <div class="sidenav-link-container">
-                    <a href="#" class="sidenav-link"
-                        onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;&nbsp;Logout</a
+                    <a href="#" class="sidenav-link" onclick="logout()"
+                        ><i class="fa-solid fa-arrow-right-from-bracket"></i
+                        >&nbsp;&nbsp;Logout</a
                     >
                 </div>
                 <div class="sidenav-overall"></div>
@@ -136,7 +137,10 @@
                     </div>
                     <div class="profile-detail-content top-right-radius">
                         <h4 class="profile-detail-title">Fullname</h4>
-                        <p class="profile-detail-subtitle">
+                        <p
+                            class="profile-detail-subtitle"
+                            id="profile-detail-subtitle-fullname"
+                        >
                             Cristiano Andres Messi Dos Santos Aveira
                         </p>
                     </div>
@@ -146,7 +150,12 @@
                     </div>
                     <div class="profile-detail-content">
                         <h4 class="profile-detail-title">Username</h4>
-                        <p class="profile-detail-subtitle">@cristianomessi</p>
+                        <p
+                            class="profile-detail-subtitle"
+                            id="profile-detail-subtitle-username"
+                        >
+                            @cristianomessi
+                        </p>
                     </div>
 
                     <div class="profile-detail-icons bottom-left-radius">
@@ -154,17 +163,98 @@
                     </div>
                     <div class="profile-detail-content bottom-right-radius">
                         <h4 class="profile-detail-title">Email</h4>
-                        <p class="profile-detail-subtitle">
+                        <p
+                            class="profile-detail-subtitle"
+                            id="profile-detail-subtitle-email"
+                        >
                             cristianomessi@gmail.com
                         </p>
                         <small class="profile-detail-edit"
-                            ><a href="#"
+                            ><a href="#" onclick="openModal()"
                                 ><i class="fa-regular fa-pen-to-square"></i>Edit
                                 Details</a
                             ></small
                         >
                     </div>
                 </div>
+
+                <!-- modal edit profile -->
+                <dialog class="modal-addnew-recipe" id="modal-edit-profile">
+                    <h2 class="recipe-title">Edit Profile Info</h2>
+                    <br />
+                    <label for="">Full Name</label>
+                    <input
+                        type="text"
+                        class="modal-input-block"
+                        placeholder=""
+                        id="fullName"
+                    />
+                    <label for="">Email</label>
+                    <input
+                        type="text"
+                        class="modal-input-block"
+                        placeholder=""
+                        id="email"
+                    />
+                    <label for="">Username</label>
+                    <input
+                        type="text"
+                        class="modal-input-block"
+                        placeholder=""
+                        id="username"
+                    />
+                    <div class="modal-group-btn">
+                        <button
+                            class="modal-cancel-btn"
+                            id="modal-cancel-btn"
+                            onclick="closeModal()"
+                        >
+                            Cancel</button
+                        ><button class="modal-add-btn" id="modal-add-btn" onclick="editProfileInfo()">
+                            Edit Profile Info
+                        </button>
+                    </div>
+                    <h2 class="recipe-title">Edit password</h2>
+                    <label for="">Current Password</label>
+                    <input
+                        type="password"
+                        class="modal-input-block"
+                        placeholder=""
+                        id="currentPassword"
+                    />
+                    <label for="">New Password</label>
+                    <input
+                        type="password"
+                        class="modal-input-block"
+                        placeholder=""
+                        id="newPassword"
+                    />
+                    <label for="">Confirm New Password</label>
+                    <input
+                        type="password"
+                        class="modal-input-block"
+                        placeholder=""
+                        id="confirmPassword"
+                    />
+                    <small class="error-msg" style="display: block; color: red;"></small>
+                    <div class="modal-group-btn">
+                        <button
+                            class="modal-cancel-btn"
+                            id="modal-cancel-btn"
+                            onclick="closeModal()"
+                        >
+                            Cancel</button
+                        ><button class="modal-add-btn" id="modal-add-btn" onclick="editPassword()">
+                            Edit Password
+                        </button>
+                    </div>
+                    <span
+                        class="modal-close-btn"
+                        id="modal-close-btn"
+                        onclick="closeModal()"
+                        >X</span
+                    >
+                </dialog>
 
                 <!-- posts and likes -->
                 <div class="posts-and-likes">
@@ -186,7 +276,7 @@
                         </h1>
                         <div class="likes-detail">
                             <h4 class="likes-detail-title">Ratings</h4>
-                            <h3 class="likes-detail-total">4.8</h3>
+                            <h3 class="likes-detail-total">0</h3>
                         </div>
                     </div>
                 </div>
@@ -196,40 +286,50 @@
 
         <!-- Footer -->
         <footer>
-        <div class="desc-contact-location">
-            <div class="logo-desc">
-                <img class="footer-image" src="./assets/Gardenia Logo Nobg.png" alt="">
-                <br>
-                <span>Gardenia recipes provides various 
-                    <br>recipes of dessert and food that using 
-                    <br>our products. This website will gathered 
-                    <br>all recipes idea from us and the 
-                    <br>Gardenia users across the country.
-                 </span>
+            <div class="desc-contact-location">
+                <div class="logo-desc">
+                    <img
+                        class="footer-image"
+                        src="./assets/Gardenia Logo Nobg.png"
+                        alt=""
+                    />
+                    <br />
+                    <span
+                        >Gardenia recipes provides various <br />recipes of
+                        dessert and food that using <br />our products. This
+                        website will gathered <br />all recipes idea from us and
+                        the <br />Gardenia users across the country.
+                    </span>
+                </div>
+                <div class="contact-email">
+                    <ul>
+                        <li><span class="contact-header">CONTACT US</span></li>
+                        <li>
+                            <span class="contact-emailaddress"
+                                >Gardeniarecipes@gmail.com</span
+                            >
+                        </li>
+                        <li>
+                            <span class="contact-number">03-123123009</span>
+                        </li>
+                        <li class="social-media" ?>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="location-map">
+                    <span class="location-header">OUR LOCATION</span>
+                    <div id="map"></div>
+                </div>
             </div>
-            <div class="contact-email">
-                <ul>
-                    <li><span class="contact-header">CONTACT US</span></li>
-                    <li><span class="contact-emailaddress">Gardeniarecipes@gmail.com</span></li>
-                    <li><span class="contact-number">03-123123009</span></li>
-                    <li class="social-media"?>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                    </li>
-                </ul>
-
+            <hr class="hr" />
+            <div class="copyright">
+                Copyright &copy; 2022 Gardenia Recipes Website All rights
+                reserved.
             </div>
-            <div class="location-map">
-                <span class="location-header">OUR LOCATION</span> 
-                <div id="map"></div>
-            </div>
-        </div>
-        <hr class="hr">
-        <div class="copyright">
-            Copyright &copy; 2022 Gardenia Recipes Website All rights reserved.
-        </div>
-    </footer>
+        </footer>
 
         <script src="scripts/profile.js"></script>
     </body>
