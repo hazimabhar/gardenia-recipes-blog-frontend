@@ -7,6 +7,7 @@
     --grey-color: #e2e2e2;
     --red-color: #fd0001;
     --darkred-color: #c41212;
+    --lightred-color: #ee7676;
     --white-color: #ffffff;
     --darkgrey-color: #5d5d5d;
     --black-color: #000000;
@@ -334,6 +335,93 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
+}
+
+/* modal styling */
+.modal-addnew-recipe {
+    padding: 20px 50px;
+    width: 900px;
+    position: relative;
+    margin: auto;
+    border: 0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.modal-addnew-recipe::backdrop {
+    background: #5d5d5d;
+    opacity: 0.7;
+}
+
+.modal-input-block, .modal-input-block::file-selector-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7.5px 10px;
+    font-size: 16px;
+}
+
+.modal-input-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-input-two div select, .modal-input-two div input {
+    width: 100%;
+    padding: 7.5px 10px;
+    font-size: 16px;
+}
+
+.modal-input-two div textarea {
+    width: 100%;
+    padding: 7.5px 10px;
+    font-size: 16px;
+    height: 400px;
+    white-space: pre-wrap;
+}
+
+.modal-group-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-group-btn button {
+    font-size: 16px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+
+.modal-cancel-btn {
+    background-color: var(--lightred-color);
+    border: 0;
+    border-radius: 5px;
+}
+
+.modal-cancel-btn:hover {
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
+
+.modal-add-btn {
+    background-color: var(--light-blue);
+    border: 0;
+    border-radius: 5px;
+}
+
+.modal-add-btn:hover {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
 
 /* footer styling */

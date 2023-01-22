@@ -30,18 +30,18 @@
                     class="navbar-img"
                 />
                 <div class="navbar-link-div">
-                    <a href="#" class="navbar-link">Breakfast</a>
+                    <a href="recipelist.html?category=Breakfast" class="navbar-link">Breakfast</a>
                 </div>
                 <div class="navbar-link-div">
-                    <a href="#" class="navbar-link">Lunch</a>
+                    <a href="recipelist.html?category=Lunch" class="navbar-link">Lunch</a>
                 </div>
                 <div class="navbar-link-div">
-                    <a href="#" class="navbar-link">Dinner</a>
+                    <a href="recipelist.html?category=Dinner" class="navbar-link">Dinner</a>
                 </div>
             </div>
             <div class="navbar-content">
-                <a href="#" class="login">Login</a
-                ><a href="#" class="signup">Signup</a>
+                <a href="login.html" class="login">Login</a
+                ><a href="signup.html" class="signup">Signup</a>
                 <a href="#" class="navbar-burger" onclick="openNav()"
                     ><i class="fa-solid fa-bars"></i
                 ></a>
@@ -54,21 +54,21 @@
                 >&times;</a
             >
             <div class="navbar-link-div">
-                <a href="#" class="navbar-link">Breakfast</a>
+                <a href="recipelist.html" class="navbar-link">Breakfast</a>
             </div>
             <div class="navbar-link-div">
-                <a href="#" class="navbar-link">Lunch</a>
+                <a href="recipelist.html" class="navbar-link">Lunch</a>
             </div>
             <div class="navbar-link-div">
-                <a href="#" class="navbar-link">Dinner</a>
+                <a href="recipelist.html" class="navbar-link">Dinner</a>
             </div>
-            <a href="#" class="login">Login</a
-            ><a href="#" class="signup">Signup</a>
+            <a href="login.html" class="login">Login</a
+            ><a href="signup.html" class="signup">Signup</a>
         </div>
 
         <!-- Login -->
         <section class="signup-container">
-            <form class="signup-input-field">
+            <form class="signup-input-field" id="signupForm">
                 <div class="signup-greet">
                     <h1>Signup for free!</h1>
                     <p>Get started with an account on Gardenia Recipes</p>
@@ -79,6 +79,7 @@
                         type="text"
                         class="signup-input-box"
                         placeholder="Enter your full name"
+                        id="fullName"
                     />
                 </div>
                 <div class="signup-input-group">
@@ -87,6 +88,7 @@
                         type="email"
                         class="signup-input-box"
                         placeholder="Enter your email"
+                        id="email"
                     />
                 </div>
                 <div class="signup-input-group">
@@ -95,6 +97,7 @@
                         type="text"
                         class="signup-input-box"
                         placeholder="Enter your username"
+                        id="username"
                     />
                 </div>
                 <div class="signup-input-group">
@@ -103,9 +106,10 @@
                         type="password"
                         class="signup-input-box"
                         placeholder="Enter your new password"
+                        id="password"
                     />
                 </div>
-                <div class="signup-input-group">
+                <div class="signup-input-group" id="confirmPasswordDiv">
                     <label for="" class="signup-input-label"
                         >Confirm Password</label
                     >
@@ -113,9 +117,10 @@
                         type="password"
                         class="signup-input-box"
                         placeholder="Confirm your password"
+                        id="confirmPassword"
                     />
                 </div>
-                <button type="submit" class="signup-btn-submit">Sign in</button>
+                <button type="submit" class="signup-btn-submit">Sign up</button>
                 <p class="signup-inform-login">
                     Already have an account?&nbsp;<a
                         href="login.html"
@@ -166,6 +171,6 @@
         </div>
     </footer>
 
-        <script src="scripts/login.js"></script>
+        <script src="scripts/signup.js"></script>
     </body>
 </html>
